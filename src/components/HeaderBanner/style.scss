@@ -1,0 +1,42 @@
+header{
+    padding: 20px 0;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.headerBannerWrapper{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.bannerCard{
+    padding: 30px 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #F7310032;
+    border-radius: 28px;
+    h3{
+        font-size: 24px;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    p{
+        font-size: 16px;
+        font-weight: 400;
+        color: #fff;
+    }
+}
