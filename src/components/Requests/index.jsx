@@ -31,7 +31,7 @@ const Requests = () => {
 
   return (
     <section className="container text-white py-20 px-4 sm:px-6 lg:px-8">
-      <div className="w-full flex flex-col bg-[#911D00] rounded-[28px] overflow-hidden">
+      <div className="w-full flex flex-col bg-[#911D00] rounded-[28px]">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 py-8 px-6 md:px-16 bg-[#FF1100] rounded-t-[28px]">
           <h3 className="text-[28px] md:text-[40px] font-bold text-center">
             50% chegirma
@@ -54,7 +54,7 @@ const Requests = () => {
           <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase leading-tight mb-6">
             Lazzat kaliti
           </h3>
-          <p className="text-lg sm:text-xl md:text-2xl font-thin mb-10">
+          <p className="text-lg sm:text-xl md:text-2xl font-thin mb-20">
             Jinsiy aloqada o‘zini qulay his etishni va undan zavq olishni
             istaganlar uchun kurs
           </p>
@@ -63,7 +63,7 @@ const Requests = () => {
             Anketani to‘ldiring
           </h4>
 
-          <div className="w-full flex flex-col md:flex-row justify-center items-center gap-6 relative">
+          <div className="w-full flex flex-col md:flex-row justify-center items-center gap-6 relative pb-20">
             <form className="w-full md:w-[60%] flex flex-col gap-6">
               <input
                 type="text"
