@@ -12,7 +12,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "Jinsiy Hayot",
+  title: "J Hayot",
   description: "Jinsiy aloqani biologiya, fiziologiya va psixologiya nuqtayi nazaridan tushunish uchun videokurslar",
 };
 

@@ -1,0 +1,12 @@
+import RegisterComponent from "../../../components/Forms/RegisterComponent";
+import React from "react";
+
+const Register = () => {
+  return (
+    <>
+      <RegisterComponent />
+    </>
+  );
+};
+
+export default Register;

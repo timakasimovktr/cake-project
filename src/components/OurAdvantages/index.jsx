@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import "./style.scss";
 import Image from "next/image";
@@ -29,7 +30,7 @@ const OurAdvantages = () => {
   return (
     <section className="container text-white py-20">
       <div className="advantagesWrapper relative">
-        <h3>Jinsiy hayot akademiyasi bu?</h3>
+        <h3>J Hayot akademiyasi bu?</h3>
         <p>
           Biz erkak va ayol o'rtasidagi an'anaviy uyg'un munosabatlar
           falsafasini o'rganadigan va targ'ib qiladigan hamjamiyatmiz.
@@ -48,6 +49,7 @@ const OurAdvantages = () => {
                 width={100}
                 height={100}
                 alt="advantage"
+                className="min-w-[60px] min-h-[60px] max-w-[60px] max-h-[60px]"
               />
               <p className="overText">{advantage.id}</p>
             </div>
@@ -55,7 +57,13 @@ const OurAdvantages = () => {
           </div>
         ))}
 
-        <Image src={"/uploads/heart.svg"} className="absolute top-[35%] right-[-50px] w-[300px]" width={100} height={100} alt="Heart Image" />
+        <Image
+          src={"/uploads/heart.svg"}
+          className="heartAdvantage absolute top-[35%] right-[-50px] w-[300px]"
+          width={100}
+          height={100}
+          alt="Heart Image"
+        />
 
         <div className="advantagesBtnWrapper w-full relative mt-10">
           <video
@@ -76,8 +84,12 @@ const OurAdvantages = () => {
             <source src="/uploads/headerBanner.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <button type="button z-2 absolute" className="btn">
-            Kursga yozilish
+          <button
+            type="button z-2 absolute"
+            className="btn"
+            onClick={() => (window.location.href = "/payment")}
+          >
+            Kursni sotib olish
           </button>
         </div>
       </div>

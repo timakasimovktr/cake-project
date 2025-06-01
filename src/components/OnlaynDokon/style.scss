@@ -1,0 +1,91 @@
+.dokonWrapper {
+    flex-direction: row;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+.routesWrapper {
+    width: 50%;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+
+    .advantageWrapper {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 16px;
+
+        @media (max-width: 768px) {
+            justify-content: center;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .advantageNum {
+            position: relative;
+
+            img {
+                width: 60px;
+                height: 60px;
+            }
+
+            .overText {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 28px;
+                font-weight: bold;
+                color: #fff;
+            }
+        }
+
+        .advantageText {
+            font-size: 20px;
+            line-height: 28px;
+            color: #ffffff;
+            margin-left: 20px;
+            font-weight: 400;
+
+            @media (max-width: 768px) {
+                margin-left: 0;
+                margin-top: 8px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.dokonImage {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        margin-top: 20px;
+
+        img {
+            width: 300px !important;
+            height: 300px !important;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .routesWrapper{
+        h3{
+            font-size: 28px;
+            line-height: 34px;
+            text-align: center;
+        }
+    }
+}

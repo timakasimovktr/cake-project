@@ -4,10 +4,40 @@ import "./style.scss";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
+import { useRouter } from "next/navigation";
 import "swiper/css";
 import "swiper/css/navigation";
 
+const speakerData = [
+  {
+    img: "/uploads/infoCard1.svg",
+    name: "Timur Kasimov",
+    description: "Brief description about the speaker and their expertise.",
+  },
+  {
+    img: "/uploads/infoCard2.svg",
+    name: "Speaker Name 2",
+    description: "Brief description about the speaker and their expertise.",
+  },
+  {
+    img: "/uploads/infoCard3.svg",
+    name: "Speaker Name 3",
+    description: "Brief description about the speaker and their expertise.",
+  },
+  {
+    img: "/uploads/infoCard4.svg",
+    name: "Speaker Name 4",
+    description: "Brief description about the speaker and their expertise.",
+  },
+  {
+    img: "/uploads/infoCard5.svg",
+    name: "Speaker Name 5",
+    description: "Brief description about the speaker and their expertise.",
+  },
+];
+
 const InfoCards = () => {
+  const router = useRouter();
   return (
     <>
       <section className="container text-white">
@@ -72,12 +102,17 @@ const InfoCards = () => {
         </div>
 
         <div className="w-full flex items-center justify-center">
-          <button className="btn my-15 m-auto">Kursga yozilish</button>
+          <button
+            className="btn mt-8 mb-12 sm:mb-16  m-auto"
+            onClick={() => router.push("/payment")}
+          >
+            Kursni sotib olish
+          </button>
         </div>
       </section>
 
-      <section className="container my-12">
-        <div className="text-white text-center mb-12">
+      <section className="container">
+        <div className="text-white text-center mb-6">
           <h2 className="text-3xl md:text-4xl font-bold uppercase leading-tight">
             bizning sertifikatlangan spikerlarimiz
           </h2>
@@ -93,7 +128,7 @@ const InfoCards = () => {
             0: { slidesPerView: 1 },
           }}
         >
-          {Array.from({ length: 5 }).map((_, index) => (
+          {/* {Array.from({ length: 5 }).map((_, index) => (
             <SwiperSlide key={index} className="">
               <div className="p-1">
                 <div className="bg-[#911D00] rounded-[28px] shadow-none border-none text-center gap-0 flex flex-col items-center pb-[30px]">
@@ -107,10 +142,34 @@ const InfoCards = () => {
                     />
                   </div>
                   <h4 className="text-white text-lg font-bold mb-2">
-                    Speaker Name {index + 1}
+                    Timur Kasimoc {index + 1}
                   </h4>
                   <p className="text-white text-md leading-snug">
                     Brief description about the speaker and their expertise.
+                  </p>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))} */}
+
+          {speakerData.map((speaker, index) => (
+            <SwiperSlide key={index} className="">
+              <div className="p-1">
+                <div className="bg-[#911D00] rounded-[28px] shadow-none border-none text-center gap-0 flex flex-col items-center pb-[30px]">
+                  <div className="w-full h-full p-4 relative">
+                    <Image
+                      src={speaker.img}
+                      alt={`speaker-${index + 1}`}
+                      width={100}
+                      height={100}
+                      className="w-full h-full max-h-[320px] object-cover rounded-xl"
+                    />
+                  </div>
+                  <h4 className="text-white text-lg font-bold mb-2">
+                    {speaker.name}
+                  </h4>
+                  <p className="text-white text-md leading-snug">
+                    {speaker.description}
                   </p>
                 </div>
               </div>

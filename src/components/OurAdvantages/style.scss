@@ -1,68 +1,169 @@
-.advantagesWrapper{
+.advantagesWrapper {
     background: #871b00;
     padding: 50px 40px 40px 40px;
     border-radius: 28px;
-    
 
-    h3{
+    h3 {
         font-size: 34px;
         line-height: 40px;
-        color: #FFFFFF;
+        color: #ffffff;
         margin-bottom: 20px;
         text-align: center;
         font-weight: 700;
     }
 
-    &>p{
+    &>p {
         font-size: 18px;
         line-height: 28px;
-        color: #FFFFFF;
+        color: #ffffff;
         margin-bottom: 20px;
         text-align: center;
         font-weight: 400;
     }
 
-    .advantageWrapper{
+    .advantageWrapper {
         width: 100%;
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        margin-bottom: 16px;
 
-        .advantageNum{
+        .advantageNum {
             position: relative;
-            .overText{
+
+            img {
+                width: 60px;
+                height: 60px;
+            }
+
+            .overText {
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 font-size: 28px;
                 font-weight: bold;
+                color: #fff;
             }
         }
 
-        .advantageText{
+        .advantageText {
             font-size: 20px;
             line-height: 28px;
-            color: #FFFFFF;
+            color: #ffffff;
             margin-left: 20px;
             font-weight: 400;
         }
     }
 
-    .advantagesBtnWrapper{
+    .advantagesBtnWrapper {
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 100px 0;
-    }
+        position: relative;
 
-    .advantagesBtnWrapper{
-        // make video darker
-        video{
+        video {
             filter: brightness(0.5);
         }
-        .btn{
+
+        .btn {
             z-index: 5;
+            padding: 16px 36px;
+            font-size: 24px;
+            border-radius: 12px;
+            background-color: #fff;
+            color: #871b00;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #ffd5cc;
+            }
+        }
+    }
+
+    // 🟣 Медиа-запросы для адаптивности
+
+    @media (max-width: 1224px) {
+        .heartAdvantage {
+            display: none;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        padding: 24px 24px;
+
+        h3 {
+            font-size: 28px;
+            line-height: 36px;
+        }
+
+        &>p {
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        .advantageText {
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        .btn {
+            font-size: 16px;
+            padding: 10px 20px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .advantageWrapper {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            .advantageText {
+                margin-left: 0;
+                margin-top: 12px;
+            }
+        }
+
+        .advantagesBtnWrapper {
+            padding: 60px 0;
+        }
+    }
+
+    @media (max-width: 480px) {
+        h3 {
+            font-size: 22px;
+            line-height: 30px;
+        }
+
+        &>p {
+            font-size: 15px;
+            line-height: 22px;
+        }
+
+        .advantageText {
+            font-size: 16px;
+        }
+
+        .advantageNum img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .overText {
+            font-size: 22px;
+        }
+
+        .btn {
+            font-size: 16px !important;
+            padding: 8px 16px !important;
+        }
+
+        .advantagesBtnWrapper {
+            padding: 40px 0;
         }
     }
 }

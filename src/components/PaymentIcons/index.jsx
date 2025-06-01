@@ -1,12 +1,15 @@
+"use client";
 import React from "react";
 import "./style.scss";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const PaymentIcons = () => {
+  const router = useRouter();
   return (
     <section className="container text-white py-20">
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold uppercase leading-tight">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase leading-tight">
           Hoziroq to‘lovni amalga oshiring
         </h2>
       </div>
@@ -30,7 +33,12 @@ const PaymentIcons = () => {
         </div>
       </div>
       <div className="w-full flex items-center justify-center">
-        <button className="btn my-15 m-auto">To‘lovni amalga oshirish</button>
+        <button
+          className="btn my-15 m-auto"
+          onClick={() => router.push("/payment")}
+        >
+          To‘lovni amalga oshirish
+        </button>
       </div>
     </section>
   );

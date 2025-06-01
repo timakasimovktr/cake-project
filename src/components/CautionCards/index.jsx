@@ -47,57 +47,72 @@ const CautionCards = () => {
   };
 
   return (
-    <section className="text-white py-12 px-0">
+    <section className="container text-white pb-12 px-4">
+      <div className="mb-16">
+        <video
+          id="autoPlayVideo"
+          className="h-full w-full rounded-[28px] max-h-[500px] object-cover"
+          controls
+          autoPlay
+          loop
+          playsInline
+        >
+          <source
+            src="https://media.geeksforgeeks.org/wp-content/uploads/20190616234019/Canvas.move_.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold uppercase leading-tight">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase leading-tight">
           JINSIY ALOQA HAQIDA EHTIYOTKORLIK BILAN,
-          <br />
+          <br className="hidden sm:block" />
           ILMIY ASOSDA GAPLASHAMIZ
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
         {data.map((item, index) => (
           <div
             key={index}
-            className="p-3 rounded-[28px] shadow-lg text-center flex flex-col items-center pb-[30px]"
-            style={{ background: "#911D00" }}
+            className="p-5 rounded-[28px] shadow-lg text-center flex flex-col items-center bg-[#911D00]"
           >
-            <div className="w-full h-full max-h-[260px] mb-4 relative">
+            <div className="w-full mb-4 relative">
               <Image
                 src={item.icon}
                 alt="icon"
                 width={100}
                 height={100}
-                className="w-full h-full object-cover rounded-t-xl"
+                className="w-full h-full object-contain"
               />
             </div>
-            <p className="text-md leading-snug">{item.text}</p>
+            <p className="text-base leading-snug">{item.text}</p>
           </div>
         ))}
       </div>
 
-      <div className="w-full flex items-center justify-center px-4 py-24 relative z-10">
-        {/* Wrapper для фоновых фигур */}
+      <div className="w-full flex items-center justify-center py-8 relative z-10">
+        {/* Dekoratsiyalar (отключены на мобилках) */}
         <div className="absolute inset-0 pointer-events-none z-0 hidden sm:block animate-float-slow">
           <Image
             src={"/uploads/moduleTriangle.svg"}
-            className="absolute top-0 left-4 w-[150px] md:w-[200px] opacity-40 animate-float-left"
+            className="absolute top-0 left-[-70px] w-[100px] md:w-[200px] opacity-40 animate-float-left"
             width={200}
             height={200}
             alt="Decorative Triangle Left"
           />
           <Image
             src={"/uploads/moduleCube.svg"}
-            className="absolute bottom-0 right-4 w-[150px] md:w-[200px] rotate-180 opacity-40 animate-float-right"
+            className="absolute bottom-0 right-[-100px] w-[100px] md:w-[200px] rotate-180 opacity-40 animate-float-right"
             width={200}
             height={200}
             alt="Decorative Triangle Right"
           />
         </div>
 
-        <div className="w-full max-w-7xl rounded-3xl bg-[#911D00] p-6 sm:p-10 shadow-xl relative z-10">
-          <h2 className="text-white text-3xl sm:text-3xl font-bold text-center mb-8">
+        <div className="w-full max-w-7xl rounded-3xl bg-[#911D00] p-4 sm:p-10 shadow-xl relative z-10">
+          <h2 className="text-white text-2xl sm:text-3xl font-bold text-center mb-4 sm:mb-8">
             KURS JADVALI
           </h2>
           <div className="space-y-4">
@@ -108,10 +123,10 @@ const CautionCards = () => {
               >
                 <button
                   onClick={() => toggleAccordion(index)}
-                  className="w-full flex justify-between items-center py-4 px-5 text-white text-left"
+                  className="w-full flex justify-between items-center py-4 px-4 text-white text-left"
                 >
-                  <span className="font-semibold">
-                    <span className="text-[#FFD6D6]">1 - MODUL</span>{" "}
+                  <span className="font-semibold text-sm sm:text-base">
+                    <span className="text-[#FFD6D6]">{index + 1} - MODUL</span>{" "}
                     {item.question}
                   </span>
                   <span
@@ -133,7 +148,7 @@ const CautionCards = () => {
                   </span>
                 </button>
                 <div
-                  className={`text-white text-sm px-5 transition-all duration-300 overflow-hidden ${
+                  className={`text-white text-sm px-4 transition-all duration-300 overflow-hidden ${
                     openIndex === index ? "max-h-40 pt-2 pb-4" : "max-h-0"
                   }`}
                 >

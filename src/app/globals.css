@@ -26,7 +26,10 @@ li {
 body {
     position: relative;
     background: #000 url(https://i.postimg.cc/hhFD7Nkf/apps-47636-13819498107583324-fb06b53a-4974-4acb-85e6-f6f363f85ab6-edec48d0-ec35-4a1f-8bf5-c455987b4a.png) repeat top center;
-    z-index: 0;
+}
+
+.headerBannerWrapperNav{
+    z-index: 1000 !important;
 }
 
 .stars,
@@ -67,7 +70,7 @@ body {
 }
 
 .btn {
-    font-size: 32px;
+    font-size: 20px;
     color: #fff;
     font-weight: 500;
     padding: 15px 42px;
@@ -87,11 +90,23 @@ body {
     .container {
         max-width: 540px;
     }
+
+    .btn {
+        font-size: 32px;
+        padding: 12px 32px;
+        border-radius: 24px;
+    }
 }
 
 @media (min-width: 768px) {
     .container {
         max-width: 720px;
+    }
+
+    .btn {
+        font-size: 22px;
+        padding: 10px 24px;
+        border-radius: 16px;
     }
 }
 
@@ -99,11 +114,23 @@ body {
     .container {
         max-width: 960px;
     }
+
+    .btn {
+        font-size: 24px;
+        padding: 12px 32px;
+        border-radius: 20px;
+    }
 }
 
 @media (min-width: 1200px) {
     .container {
         max-width: 1140px;
+    }
+
+    .btn {
+        font-size: 28px;
+        padding: 10px 28px;
+        border-radius: 18px;
     }
 }
 
@@ -111,7 +138,12 @@ body {
     .container {
         max-width: 1320px;
     }
-}
+
+    .btn {
+        font-size: 32px;
+        padding: 10px 24px;
+        border-radius: 16px;
+    }}
 
 @keyframes float-left {
     0% {
