@@ -1,56 +1,89 @@
+"use client";
 import React from "react";
+
+const info = {
+  logo: {
+    src: "uploads/logo.svg",
+    alt: "blocks for shadcn/ui",
+    url: "https://t.me/inogdami",
+  },
+
+  tagline: "Biz bilan birga bo'ling!",
+
+  menuItems: [
+    {},
+    {},
+    {
+      title: "Yangiliklar",
+      links: [
+        { text: "5 та нарса — эркаклар...", url: "https://telegra.ph/5-ta-narsa--ehrkaklar-%D2%B3ayotida-kech-yoki-tez-uchrajdi-06-02" },
+        { text: "3 та савол — сизни...", url: "https://telegra.ph/3-ta-savol--sizni-%D2%9Bandaj-ehrkak-ehkaningizni-k%D1%9Ersatadi-06-02" },
+        { text: "3 марта эркаклар...", url: "https://telegra.ph/3-marta-ehrkaklar-%D1%9Ezini-j%D1%9E%D2%9Botadigan-vaziyat-06-02" },
+      ],
+    },
+    {
+      title: "Ishtimoiy tarmoqlar",
+      links: [
+        { text: "Telegram", url: "https://t.me/inogdami" },
+        { text: "Instagram", url: "https://www.instagram.com/jinsiy__hayot?igsh=anpjNjRqaHE1bzF3" },
+      ],
+    },
+  ],
+  copyright: "© 2025 Aurora Agency. All rights reserved.",
+  bottomLinks: [
+    { text: "Telegram", url: "https://t.me/inogdami" },
+    { text: "Instagram", url: "https://www.instagram.com/jinsiy__hayot?igsh=anpjNjRqaHE1bzF3" },
+  ],
+};
 
 const Footer = () => {
   return (
-    <div className="container text-white">
-      <div className="flex flex-wrap items-center justify-center @max-[924px]:rounded-2xl rounded-full gap-y-2 gap-x-10 px-5 py-3.5 shadow-2xs border border-black/10 dark:border-transparent dark:bg-dark-surface">
-        <p className="mb-0">
-          <small>
-            Copyright © <span id="copyright-year">2025</span> Aurora Agency
-          </small>
-        </p>
-        <ul className="flex flex-wrap gap-1 items-center list-none">
-          <li className="flex bg-primary dark:bg-primary-variant rounded-full transition-transform duration-200 hover:scale-110">
-            <a
-              className="r-exclude-a p-2"
-              href="https://t.me/inogdami"
-              title="https://t.me/inogdami"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="800px"
-                height="800px"
-                viewBox="0 0 32 32"
-                fill="none"
-                className="w-6 h-6"
-              >
-                <circle
-                  cx="16"
-                  cy="16"
-                  r="14"
-                  fill="url(#paint0_linear_87_7225)"
-                />
-                <path
-                  d="M22.9866 10.2088C23.1112 9.40332 22.3454 8.76755 21.6292 9.082L7.36482 15.3448C6.85123 15.5703 6.8888 16.3483 7.42147 16.5179L10.3631 17.4547C10.9246 17.6335 11.5325 17.541 12.0228 17.2023L18.655 12.6203C18.855 12.4821 19.073 12.7665 18.9021 12.9426L14.1281 17.8646C13.665 18.3421 13.7569 19.1512 14.314 19.5005L19.659 22.8523C20.2585 23.2282 21.0297 22.8506 21.1418 22.1261L22.9866 10.2088Z"
-                  fill="white"
-                />
-                <defs>
-                  <linearGradient
-                    id="paint0_linear_87_7225"
-                    x1="16"
-                    y1="2"
-                    x2="16"
-                    y2="30"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                  </linearGradient>
-                </defs>
-              </svg>
-            </a>
-          </li>
-        </ul>
+    <section className="pb-10 text-white">
+      <div className="container">
+        <footer>
+          <div className="grid grid-cols-2 gap-8 lg:grid-cols-6">
+            <div className="col-span-2 mb-8 lg:mb-0">
+              <div className="flex items-center gap-2 lg:justify-start">
+                <a href="https://shadcnblocks.com">
+                  <img
+                    src={info.logo.src}
+                    alt={info.logo.alt}
+                    title={info.logo.title}
+                    className="h-10"
+                  />
+                </a>
+              </div>
+              <p className="mt-4 font-bold">{info.tagline}</p>
+            </div>
+            {info.menuItems.map((section, sectionIdx) => (
+              <div key={sectionIdx}>
+                <h3 className="mb-4 font-bold">{section.title}</h3>
+                <ul className="space-y-4 text-white">
+                  {section?.links?.map((link, linkIdx) => (
+                    <li
+                      key={linkIdx}
+                      className="font-medium hover:text-white/70 transition-colors duration-200"
+                    >
+                      <a href={link.url}>{link.text}</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <div className="mt-24 flex flex-col justify-between gap-4 border-t pt-8 text-sm font-medium text-white md:flex-row md:items-center">
+            <p>{info.copyright}</p>
+            <ul className="flex gap-4">
+              {info.bottomLinks.map((link, linkIdx) => (
+                <li key={linkIdx} className="underline hover:text-white">
+                  <a href={link.url}>{link.text}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </footer>
       </div>
-    </div>
+    </section>
   );
 };
 

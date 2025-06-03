@@ -95,7 +95,7 @@ export default function ResetPasswordComponent() {
   return (
     <div className="flex flex-col lg:flex-row justify-center h-screen w-full bg-black overflow-hidden">
       <div className="w-full lg:w-[40%] p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col relative z-10">
-        <div className="mb-8 md:mb-16">
+        <div className="mb-8 md:mb-16 flex justify-center align-center">
           <div className="w-[100px] h-[54px] md:w-[159px]">
             <Image
               src="/uploads/logo.svg"

@@ -21,7 +21,7 @@ const HeaderNavigation = () => {
           <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0">
             <li>
               <span className="text-white text-lg font-medium">
-                +988(88) 188 77 77
+                Biz bilan bog'laning
               </span>
             </li>
           </ul>

@@ -23,6 +23,7 @@ export default function RegisterComponent() {
       password: "",
       confirm_password: "",
       fullName: "",
+      agree: false,
     },
   });
 
@@ -46,9 +47,10 @@ export default function RegisterComponent() {
 
   const handleRegister = async (data) => {
     try {
-      const { confirm_password, ...submitData } = data;
+      const submitData = { ...data };
+      delete submitData.confirm_password;
+      delete submitData.agree;
 
-      // Отправка данных на сервер — первая часть
       await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/auth/register`, {
         ...submitData,
         phoneNumber: submitData.phoneNumber.replace(/[^\d+]/g, ""),
@@ -70,7 +72,9 @@ export default function RegisterComponent() {
   const handleVerifyCode = async () => {
     try {
       const values = getValues();
-      const { confirm_password, ...submitData } = values;
+      const submitData = { ...values };
+      delete submitData.confirm_password;
+      delete submitData.agree;
 
       await axios.post(
         `${process.env.NEXT_PUBLIC_API_URL}/auth/verify-phone-code`,
@@ -81,7 +85,7 @@ export default function RegisterComponent() {
       );
 
       toast.success("Ro'yxatdan muvaffaqiyatli o'tdingiz!");
-      router.push("/");
+      router.push("/dashboard");
     } catch (error) {
       if (axios.isAxiosError(error)) {
         toast.error(error.response?.data?.message || "Xatolik kodda");
@@ -95,13 +99,13 @@ export default function RegisterComponent() {
     <div className="flex flex-col lg:flex-row justify-center h-screen w-full bg-black overflow-hidden">
       <div className="w-full lg:w-[40%] p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col relative z-10">
         <div className="mb-8 md:mb-16">
-          <div className="w-[100px] h-[54px] md:w-[159px]">
+          <div className="w-[100px] h-[54px] md:w-[159px] flex justify-center align-center">
             <Image
               src="/uploads/logo.svg"
               alt="Logo"
               width={159}
               height={54}
-              className="brightness-200"
+              className="brightness-200 mx-auto"
             />
           </div>
         </div>
@@ -112,7 +116,10 @@ export default function RegisterComponent() {
           </h1>
           <p className="text-gray-400 text-xs sm:text-sm mb-6 sm:mb-8">
             Akkauntingiz bormi?
-            <Link href="/login" className="text-[#FF3A29] hover:text-[#E62200] ml-1">
+            <Link
+              href="/login"
+              className="text-[#FF3A29] hover:text-[#E62200] ml-1"
+            >
               Kirish
             </Link>
           </p>
@@ -133,7 +140,6 @@ export default function RegisterComponent() {
                   rules={{ required: "Ism kiritish majburiy" }}
                   render={({ field }) => (
                     <Input
-                      id="fullName"
                       type="text"
                       placeholder="Ismingiz"
                       value={field.value}
@@ -168,7 +174,6 @@ export default function RegisterComponent() {
                   }}
                   render={({ field }) => (
                     <Input
-                      id="phoneNumber"
                       type="text"
                       placeholder="+998 90 123 45 67"
                       value={field.value}
@@ -193,7 +198,6 @@ export default function RegisterComponent() {
                 </label>
                 <div className="flex relative items-center">
                   <Input
-                    id="password"
                     type={showPassword ? "text" : "password"}
                     placeholder="••••••••"
                     {...register("password", { required: "Parol majburiy" })}
@@ -229,11 +233,15 @@ export default function RegisterComponent() {
                 </label>
                 <div className="flex relative items-center">
                   <Input
-                    id="confirm_password"
                     type={showConfirmPassword ? "text" : "password"}
                     placeholder="••••••••"
                     {...register("confirm_password", {
                       required: "Parolni tasdiqlash majburiy",
+                      minLength: {
+                        value: 8,
+                        message:
+                          "Parol kamida 8 ta belgidan iborat bo‘lishi kerak",
+                      },
                       validate: (value) =>
                         value === getValues("password") || "Parollar mos emas",
                     })}
@@ -258,6 +266,37 @@ export default function RegisterComponent() {
                   </p>
                 )}
               </div>
+
+              <div className="flex items-center space-x-3 pt-2">
+                <input
+                  type="checkbox"
+                  id="agree"
+                  {...register("agree", {
+                    required: "Ofertaga rozilik majburiy",
+                  })}
+                  className="mt-1 h-4 w-4 text-[#CC1F00] bg-transparent border-gray-600 focus:ring-0 rounded-md cursor-pointer"
+                />
+                <label
+                  htmlFor="agree"
+                  className="text-sm text-gray-300 leading-snug"
+                >
+                  Men{" "}
+                  <a
+                    href="https://telegra.ph/PUBLICHNAYA-OFERTA-05-30-2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline text-[#FF3A29] hover:text-[#E62200]"
+                  >
+                    Ommaviy ofertani
+                  </a>{" "}
+                  o‘qidim va rozi bo‘ldim
+                </label>
+              </div>
+              {errors.agree && (
+                <p className="text-red-500 text-xs mt-1">
+                  {errors.agree.message}
+                </p>
+              )}
 
               <div className="pt-2 sm:pt-4">
                 <Button className="w-full bg-[#CC1F00] hover:bg-[#B31B00] text-white h-10 sm:h-12 rounded-md font-medium">

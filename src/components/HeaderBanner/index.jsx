@@ -4,6 +4,7 @@ import "./style.scss";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Button } from "../ui/button";
+import { Toaster, toast } from "sonner";
 import {
   Dialog,
   DialogContent,
@@ -67,7 +68,7 @@ const HeaderBanner = () => {
         <source src="/uploads/headerBanner.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-
+      <Toaster theme="dark" position="bottom-center" richColors />
       <Dialog open={is18Plus}>
         <DialogContent className="pt-[50px] rounded-[28px] text-white bg-black border-white/10">
           <DialogHeader className="text-center mb-6">
@@ -109,7 +110,7 @@ const HeaderBanner = () => {
       <div className="headerBannerWrapper container pt-20 px-4">
         <div className="pageTitleWrapper w-full pt-10 pb-0 sm:pb-10 text-center">
           <h1 className="pageTitle text-4xl md:text-7xl font-bold text-white uppercase leading-tight">
-            J Hayot qo‘llanmasi
+            Jinsiy Hayot qo‘llanmasi
           </h1>
           <button
             className="btn my-8 sm:my-20"
@@ -121,23 +122,29 @@ const HeaderBanner = () => {
 
         <div className="headerBannerCards flex flex-col md:flex-row gap-4 md:gap-2 mb-12">
           <div className="bannerCard">
-            <h3>30 + kurslar</h3>
-            <p>jonli modellarda va manekenlar, onlayn</p>
-          </div>
-          <div className="bannerCard">
-            <h3>15 ta murabbiy</h3>
+            <h3>25+ darslarimiz</h3>
             <p>
-              sizni guru qiladigan,o'zinig ishidagi eng yaxshi mutaxassislar
+              Jinsiy aloqa haqida bilimlarni oling va o'z mahoratingizni
+              oshiring
             </p>
           </div>
           <div className="bannerCard">
-            <h3>3k + mashg'ulotlar</h3>
-            <p>jinsiy aloqa turli yo'nalishlarda akademiyamida o'rganasiz</p>
+            <h3>4+ mutaxassislar</h3>
+            <p>
+              Sizni guru qiladigan,o'zinig ishidagi eng yaxshi mutaxassislar
+            </p>
           </div>
           <div className="bannerCard">
-            <h3>3k + o'quvchilar</h3>
+            <h3>7300+ fikrlar</h3>
             <p>
-              bizning kurslarimizdan keyin ular yanada muvaffaqiyatli bo'lishdi
+              Jinsiy aloqa turli yo'nalishlarda video kurslar orqali o'rganasiz
+            </p>
+          </div>
+          <div className="bannerCard">
+            <h3>3200+ o'quvchilar</h3>
+            <p>
+              Kursni tamomlagandan so'ng, siz jinsiy aloqa bo'yicha mutaxassis
+              bo'lasiz
             </p>
           </div>
         </div>

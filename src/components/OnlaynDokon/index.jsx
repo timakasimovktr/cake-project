@@ -49,7 +49,7 @@ const OnlaynDokon = () => {
               />
               <p className="overText">1</p>
             </div>
-            <div className="advantageText">Royhatdan otish</div>
+            <div className="advantageText">Ro'yhatdan otish</div>
           </div>
           <div className="advantageWrapper w-full">
             <div className="advantageNum">
@@ -77,7 +77,7 @@ const OnlaynDokon = () => {
               />
               <p className="overText">3</p>
             </div>
-            <div className="advantageText">O‘rganishni boshlash</div>
+            <div className="advantageText">O‘rganishni hoziroq boshlang</div>
           </div>
           <button
             className="

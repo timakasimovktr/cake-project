@@ -81,14 +81,14 @@ export default function LoginComponent() {
   return (
     <div className="flex flex-col lg:flex-row justify-center h-screen w-full bg-black overflow-hidden">
       <div className="w-full lg:w-[40%] p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col relative z-10">
-        <div className="mb-8 md:mb-16">
+        <div className="mb-8 md:mb-16 flex justify-center align-center">
           <div className="w-[159px] h-[54px]">
             <Image
               src="/uploads/logo.svg"
               alt="Logo"
               width={159}
               height={54}
-              className="brightness-200"
+              className="brightness-200 mx-auto"
             />
           </div>
         </div>
@@ -130,7 +130,6 @@ export default function LoginComponent() {
                 }}
                 render={({ field }) => (
                   <Input
-                    id="phoneNumber"
                     placeholder="+998 90 123 45 67"
                     type="text"
                     value={field.value}
@@ -155,7 +154,6 @@ export default function LoginComponent() {
               </label>
               <div className="flex relative items-center">
                 <Input
-                  id="password"
                   type={showPassword ? "text" : "password"}
                   placeholder="••••••••"
                   {...register("password", {

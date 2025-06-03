@@ -7,37 +7,37 @@ import "swiper/css/navigation";
 
 const reviews = [
   {
-    text: `Farzand tug‘ilganidan keyin turmush o‘rtog‘i bilan J Hayot deyarli yo‘q bo‘lib ketdi. U boshqalarga qaray boshlaydi, deb qo‘rqdim... Ushbu kurs menga ishtiyoq va ishonchni qaytarishga yordam berdi.`,
+    text: `Farzand tug‘ilganidan keyin turmush o‘rtog‘i bilan Jinsiy Hayot deyarli yo‘q bo‘lib ketdi. U boshqalarga qaray boshlaydi, deb qo‘rqdim... Ushbu kurs menga ishtiyoq va ishonchni qaytarishga yordam berdi.`,
     name: "Umida",
     ageInfo: "28 yosh (5 yildan beri turmushda)",
     avatar: "https://pagedone.io/asset/uploads/1696229994.png",
   },
   {
-    text: `Farzand tug‘ilganidan keyin turmush o‘rtog‘i bilan J Hayot deyarli yo‘q bo‘lib ketdi. U boshqalarga qaray boshlaydi, deb qo‘rqdim... Ushbu kurs menga ishtiyoq va ishonchni qaytarishga yordam berdi.`,
+    text: `Farzand tug‘ilganidan keyin turmush o‘rtog‘i bilan Jinsiy Hayot deyarli yo‘q bo‘lib ketdi. U boshqalarga qaray boshlaydi, deb qo‘rqdim... Ushbu kurs menga ishtiyoq va ishonchni qaytarishga yordam berdi.`,
     name: "Umida",
     ageInfo: "28 yosh (5 yildan beri turmushda)",
     avatar: "https://pagedone.io/asset/uploads/1696229994.png",
   },
   {
-    text: `Farzand tug‘ilganidan keyin turmush o‘rtog‘i bilan J Hayot deyarli yo‘q bo‘lib ketdi. U boshqalarga qaray boshlaydi, deb qo‘rqdim... Ushbu kurs menga ishtiyoq va ishonchni qaytarishga yordam berdi.`,
+    text: `Farzand tug‘ilganidan keyin turmush o‘rtog‘i bilan Jinsiy Hayot deyarli yo‘q bo‘lib ketdi. U boshqalarga qaray boshlaydi, deb qo‘rqdim... Ushbu kurs menga ishtiyoq va ishonchni qaytarishga yordam berdi.`,
     name: "Umida",
     ageInfo: "28 yosh (5 yildan beri turmushda)",
     avatar: "https://pagedone.io/asset/uploads/1696229994.png",
   },
   {
-    text: `Farzand tug‘ilganidan keyin turmush o‘rtog‘i bilan J Hayot deyarli yo‘q bo‘lib ketdi. U boshqalarga qaray boshlaydi, deb qo‘rqdim... Ushbu kurs menga ishtiyoq va ishonchni qaytarishga yordam berdi.`,
+    text: `Farzand tug‘ilganidan keyin turmush o‘rtog‘i bilan Jinsiy Hayot deyarli yo‘q bo‘lib ketdi. U boshqalarga qaray boshlaydi, deb qo‘rqdim... Ushbu kurs menga ishtiyoq va ishonchni qaytarishga yordam berdi.`,
     name: "Umida",
     ageInfo: "28 yosh (5 yildan beri turmushda)",
     avatar: "https://pagedone.io/asset/uploads/1696229994.png",
   },
   {
-    text: `Farzand tug‘ilganidan keyin turmush o‘rtog‘i bilan J Hayot deyarli yo‘q bo‘lib ketdi. U boshqalarga qaray boshlaydi, deb qo‘rqdim... Ushbu kurs menga ishtiyoq va ishonchni qaytarishga yordam berdi.`,
+    text: `Farzand tug‘ilganidan keyin turmush o‘rtog‘i bilan Jinsiy Hayot deyarli yo‘q bo‘lib ketdi. U boshqalarga qaray boshlaydi, deb qo‘rqdim... Ushbu kurs menga ishtiyoq va ishonchni qaytarishga yordam berdi.`,
     name: "Umida",
     ageInfo: "28 yosh (5 yildan beri turmushda)",
     avatar: "https://pagedone.io/asset/uploads/1696229994.png",
   },
   {
-    text: `Farzand tug‘ilganidan keyin turmush o‘rtog‘i bilan J Hayot deyarli yo‘q bo‘lib ketdi. U boshqalarga qaray boshlaydi, deb qo‘rqdim... Ushbu kurs menga ishtiyoq va ishonchni qaytarishga yordam berdi.`,
+    text: `Farzand tug‘ilganidan keyin turmush o‘rtog‘i bilan Jinsiy Hayot deyarli yo‘q bo‘lib ketdi. U boshqalarga qaray boshlaydi, deb qo‘rqdim... Ushbu kurs menga ishtiyoq va ishonchni qaytarishga yordam berdi.`,
     name: "Umida",
     ageInfo: "28 yosh (5 yildan beri turmushda)",
     avatar: "https://pagedone.io/asset/uploads/1696229994.png",

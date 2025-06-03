@@ -10,29 +10,44 @@ import "swiper/css/navigation";
 
 const speakerData = [
   {
-    img: "/uploads/infoCard1.svg",
-    name: "Timur Kasimov",
-    description: "Brief description about the speaker and their expertise.",
+    img: "/uploads/speaker1.svg",
+    name: "Napasov Hurshid Salayevich",
+    description: "Seksolog, Psixolog",
   },
   {
-    img: "/uploads/infoCard2.svg",
-    name: "Speaker Name 2",
-    description: "Brief description about the speaker and their expertise.",
+    img: "/uploads/speaker2.svg",
+    name: "Kabiljanov Kamron Kamilovich",
+    description: "Munosabatlar bo’yicha mutaxassis",
   },
   {
-    img: "/uploads/infoCard3.svg",
-    name: "Speaker Name 3",
-    description: "Brief description about the speaker and their expertise.",
+    img: "/uploads/speaker3.svg",
+    name: "Esanboyev Muxriddin Egmatoy o‘gli",
+    description: "Terapeft, Urolog",
   },
   {
-    img: "/uploads/infoCard4.svg",
-    name: "Speaker Name 4",
-    description: "Brief description about the speaker and their expertise.",
+    img: "/uploads/speaker4.svg",
+    name: "Togaymurodova Zebiniso Faxriddin qizi",
+    description: "O’liy toifali ginekolog",
   },
   {
-    img: "/uploads/infoCard5.svg",
-    name: "Speaker Name 5",
-    description: "Brief description about the speaker and their expertise.",
+    img: "/uploads/speaker1.svg",
+    name: "Napasov Hurshid Salayevich",
+    description: "Seksolog, Psixolog",
+  },
+  {
+    img: "/uploads/speaker2.svg",
+    name: "Kabiljanov Kamron Kamilovich",
+    description: "Munosabatlar bo’yicha mutaxassis",
+  },
+  {
+    img: "/uploads/speaker3.svg",
+    name: "Esanboyev Muxriddin Egmatoy o‘gli",
+    description: "Terapeft, Urolog",
+  },
+  {
+    img: "/uploads/speaker4.svg",
+    name: "Togaymurodova Zebiniso Faxriddin qizi",
+    description: "O’liy toifali ginekolog",
   },
 ];
 
@@ -43,9 +58,9 @@ const InfoCards = () => {
       <section className="container text-white">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold uppercase leading-tight">
-            bizning akademiyamizni tamomlagandan
+            Bizning kursimizni tamomlagandan
             <br />
-            ketin nimlarni o‘rganasiz?
+            song nimalarni o‘rganasiz?
           </h2>
         </div>
 
@@ -114,7 +129,7 @@ const InfoCards = () => {
       <section className="container">
         <div className="text-white text-center mb-6">
           <h2 className="text-3xl md:text-4xl font-bold uppercase leading-tight">
-            bizning sertifikatlangan spikerlarimiz
+            bizning sertifikatlangan mutaxassislarimiz
           </h2>
         </div>
 

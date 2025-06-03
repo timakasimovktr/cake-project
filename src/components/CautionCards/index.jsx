@@ -5,37 +5,55 @@ import Image from "next/image";
 const data = [
   {
     icon: "/uploads/cautionCard1.svg",
-    text: "Jinsiy aloqani biologiya, fiziologiya va psixologiya nuqtayi nazaridan tushunish uchun videokurslar",
+    text: "Jinsiy aloqani seksologiya, fiziologiya va psixologiya nuqtayi nazaridan tushunish uchun videokurslar",
   },
   {
     icon: "/uploads/cautionCard2.svg",
-    text: "ekspertlar - psixolog, seksolog va ginekologlarga savollar berish imkoniyati",
+    text: "Ekspertlar - psixolog, seksolog va ginekologlarga savollar berish imkoniyati",
   },
   {
     icon: "/uploads/cautionCard3.svg",
-    text: "umrbod videokurlarga kirish imkoniyati: kerakli vaqtda bilimlarga qayting",
+    text: "Umrbod videokurslarga kirish imkoniyati: kerakli vaqtda bilimlarga qayting",
   },
   {
     icon: "/uploads/cautionCard4.svg",
-    text: "ilmiy tadqiqotlardan olingan dolzarb va aniq ma’lumotlar",
+    text: "Ilmiy tadqiqotlardan olingan dolzarb va aniq ma’lumotlar",
   },
 ];
 
 const accordionData = [
   {
-    question: "Material Tailwind nima?",
-    answer:
-      "Material Tailwind — bu Tailwind CSS uchun tayyor komponentlar va zamonaviy dizaynlar kutubxonasi.",
+    question: "Erkaklar va ayollar salomatligi",
+    answer: "1. Anatomiyasi va funksiyasi <br> 2. Gigiyena va jinsiy yo‘l bilan yuqadigan infeksiyalar <br> 3. Urologiyaga kirish: urolog nimani davolaydi? <br> 4. Erkaklar va ayollar siydik-tanosil tizimining anatomiyasi va fiziologiyasi <br> 5. Hayz ko‘rish muammolari va PMS <br> 6. Erkaklar va ayollar uchun kontratsepsiya",
   },
   {
-    question: "Qanday ishlatiladi?",
-    answer:
-      "Siz komponentlarni import qilib, Tailwind loyihangizda bevosita ishlatishingiz mumkin.",
+    question: "PIKAP XXI ASRDA: yaqinlashuv fan sifatida",
+    answer: "1. Erkaklar uchun jalib etish: alfa strategiyasi va xulq-atvori <br>2. Ayollar uchun jozibadorlik: yumshoq kuch, signallar <br>3. Partnerni qanday qilib ehtiroslantirish kerak <br>4. Ideal o‘lcham qaysi?",
   },
   {
-    question: "U bilan nimalar qilsa bo'ladi?",
+    question: "Istak kimyosi: bizni boshqaradigan gormonlar",
     answer:
-      "Zamonaviy va javob beruvchi saytlar yaratish juda tez va oson bo'ladi.",
+      "1. Testosteron gormonlar qiroli <br> 2. Seksual fantaziyalar <br> 3. Jinsiy aloqa va hayz sikli  <br> 4. Ovqat, uyqu va stress jinsiy moyillikni qanday o‘ldiradi (yoki kuchaytiradi)?",
+  },
+  {
+    question: "Psixologiya va seksologiya",
+    answer:
+      "1. Juftlikda ishonch va xavfsizlik<br> 2. Jinsiy fantaziyalar va kreativlik<br> 3. Masturbatsiya: bu normal holatmi yoki noto‘g‘rimi?<br> 4. 40 yoshdan keyingi jinsiy aloqa: agar hamma narsa o‘zgarsa, nima qilish kerak?<br> 5. Jinsiy aloqa haqida 10 ta afsona.",
+  },
+  {
+    question: "Libidoni maksimal darajada olib chiqamiz",
+    answer:
+      "1. Jinsiy aloqada xavfsizlik: holatlar, xavf-xatarlar va tana signallari<br>2. Jinsiy maylni oshirish va jismoniy mashqlar<br>3. Jinsiy hayotni tezlashtirish uchun oddiy layfxaklar",
+  },
+  {
+    question: "PRO orgazm",
+    answer:
+      "1. Partnerda qanday ehtirosni uyg'otiladi <br> 2. Erkaklar orgazmi: afsonalar va haqiqat <br> 3. Ayol orgazmi: klitor, qin va undan tashqari <br> 4. Ko‘p  marttalik orgazm - bu afsona emas <br> 5. Pornografiyaga qaramlik",
+  },
+  {
+    question: "Top 10 qaynoq savollar",
+    answer:
+      "1. Ginekologiya<br> 2. Psixolog & seksolog<br> 3. Urologiya<br> 4. Pikaper",
   },
 ];
 
@@ -50,17 +68,12 @@ const CautionCards = () => {
     <section className="container text-white pb-12 px-4">
       <div className="mb-16">
         <video
-          id="autoPlayVideo"
-          className="h-full w-full rounded-[28px] max-h-[500px] object-cover"
+          className="h-full w-full rounded-[28px] max-h-[600px] object-cover"
           controls
-          autoPlay
-          loop
           playsInline
+          poster="/uploads/prviewImg.png"
         >
-          <source
-            src="https://media.geeksforgeeks.org/wp-content/uploads/20190616234019/Canvas.move_.mp4"
-            type="video/mp4"
-          />
+          <source src="/uploads/preview.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
@@ -152,7 +165,11 @@ const CautionCards = () => {
                     openIndex === index ? "max-h-40 pt-2 pb-4" : "max-h-0"
                   }`}
                 >
-                  {item.answer}
+                  <div
+                    dangerouslySetInnerHTML={{ __html: item.answer }}
+                    className="leading-relaxed"
+                  >
+                  </div>
                 </div>
               </div>
             ))}

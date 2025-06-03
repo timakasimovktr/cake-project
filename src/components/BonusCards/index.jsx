@@ -7,12 +7,19 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
+const bonusImgs = {
+  bonus1: "/uploads/bonus1.svg",
+  bonus2: "/uploads/bonus2.svg",
+  bonus3: "/uploads/bonus3.svg",
+  bonus4: "/uploads/bonus4.svg",
+};
+
 const BonusCards = () => {
   return (
     <section className="py-20 w-full px-4 md:px-0">
       <div className="text-center mb-12">
         <h2 className="text-white text-3xl md:text-4xl font-bold uppercase leading-tight">
-          bepul bonus video materiallar
+          bepul bonus materiallar
         </h2>
       </div>
 
@@ -42,11 +49,11 @@ const BonusCards = () => {
         modules={[EffectCoverflow, Pagination, Autoplay]}
         className="w-full max-w-6xl mx-auto"
       >
-        {[...Array(6)].map((_, idx) => (
-          <SwiperSlide key={idx} className="flex justify-center items-center">
+        {Object.entries(bonusImgs).map(([key, imgSrc], index) => (
+          <SwiperSlide key={index} className="flex justify-center items-center">
             <img
-              src="/uploads/bonus3.svg"
-              alt={`Slide ${idx + 1}`}
+              src={imgSrc}
+              alt={`Bonus ${index + 1}`}
               className="rounded-xl max-h-[300px] object-contain"
             />
           </SwiperSlide>

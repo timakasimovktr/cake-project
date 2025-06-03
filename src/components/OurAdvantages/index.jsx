@@ -30,7 +30,7 @@ const OurAdvantages = () => {
   return (
     <section className="container text-white py-20">
       <div className="advantagesWrapper relative">
-        <h3>J Hayot akademiyasi bu?</h3>
+        <h3>Jinsiy Hayot bu?</h3>
         <p>
           Biz erkak va ayol o'rtasidagi an'anaviy uyg'un munosabatlar
           falsafasini o'rganadigan va targ'ib qiladigan hamjamiyatmiz.
