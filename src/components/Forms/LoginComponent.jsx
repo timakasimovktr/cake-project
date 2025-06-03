@@ -11,6 +11,12 @@ import axios from "axios";
 import Cookies from "js-cookie";
 import { toast } from "sonner";
 
+const friendlyMessages = {
+  "Wrong password": "Parol noto‘g‘ri kiritildi",
+  "User not found": "Bunday foydalanuvchi topilmadi",
+  // и так далее
+};
+
 export default function LoginComponent() {
   const {
     register,
@@ -31,7 +37,6 @@ export default function LoginComponent() {
 
   const getTokenUrl = () => {
     const path = usePathname();
-    
   };
 
   const onSubmit = async (data) => {
@@ -52,19 +57,17 @@ export default function LoginComponent() {
       const token = response.data.access_token;
 
       Cookies.set("access_token", token, { expires: 7, path: "/" });
-
       console.log("Login successful:", token);
       router.push("/");
     } catch (error) {
       if (axios.isAxiosError(error)) {
-        if (axios.isAxiosError(error)) {
-          toast.error(
-            "Server bilan muammo yuz berdi. Qaytadan urinib ko'ring."
-          );
-        } else {
-          console.error("Unexpected error:", error);
-          toast("Nomaʼlum xatolik yuz berdi.");
-        }
+        const rawMessage = error.response?.data?.message;
+        const message = Array.isArray(rawMessage) ? rawMessage[0] : rawMessage;
+
+        toast.error(message || "Server bilan muammo yuz berdi.");
+      } else {
+        console.error("Unexpected error:", error);
+        toast.error("Nomaʼlum xatolik yuz berdi.");
       }
     }
   };
@@ -94,10 +97,10 @@ export default function LoginComponent() {
         </div>
 
         <div className="flex-grow flex flex-col justify-center max-w-md mx-auto w-full">
-          <h1 className="text-white text-xl sm:text-2xl font-medium mb-2">
+          <h1 className="text-white text-xl sm:text-2xl font-medium mb-2 flex justify-center align-center">
             Platformaga kirish!
           </h1>
-          <p className="text-gray-400 text-xs sm:text-sm mb-6 sm:mb-8">
+          <p className="text-gray-400 text-xs sm:text-sm mb-6 sm:mb-8 text-center">
             Yangi foydalanuvchi? /
             <Link
               href="/register"

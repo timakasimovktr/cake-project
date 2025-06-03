@@ -49,7 +49,7 @@ export default function ResetPasswordComponent() {
     try {
       await axios.post(
         `${process.env.NEXT_PUBLIC_API_URL}/auth/send-phone-code`,
-        { phoneNumber: data.phoneNumber }
+        { phoneNumber: data.phoneNumber.replace(/[^\d+]/g, "") }
       );
       setSuccessMessage("Kod telefon raqamingizga yuborildi.");
       setSendPhoneCode(true);
@@ -65,7 +65,7 @@ export default function ResetPasswordComponent() {
       await axios.post(
         `${process.env.NEXT_PUBLIC_API_URL}/auth/change-password`,
         {
-          phoneNumber: data.phoneNumber,
+          phoneNumber: data.phoneNumber.replace(/[^\d+]/g, ""),
           code: data.code,
           newPassword: data.newPassword,
         }

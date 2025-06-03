@@ -70,26 +70,22 @@ const HeaderBanner = () => {
       </video>
       <Toaster theme="dark" position="bottom-center" richColors />
       <Dialog open={is18Plus}>
-        <DialogContent className="pt-[50px] rounded-[28px] text-white bg-black border-white/10">
+        <DialogContent className="pt-10 px-4 sm:px-10 rounded-[28px] text-white bg-black border border-white/10 max-w-[90%] sm:max-w-md mx-auto">
           <DialogHeader className="text-center mb-6">
-            <DialogTitle className="text-2xl text-center">
+            <DialogTitle className="text-xl sm:text-2xl text-center">
               Siz 18 yoshga to‘lganingizni tasdiqlaysizmi?
             </DialogTitle>
-            <DialogDescription className="text-center text-3xl mt-4 text-red-500">
+            <DialogDescription className="text-center text-2xl sm:text-3xl mt-4 text-red-500">
               18+
             </DialogDescription>
           </DialogHeader>
 
           <DialogFooter>
-            <div
-              className={
-                "w-full flex flex-col gap-4 sm:justify-center items-center"
-              }
-            >
+            <div className="w-full flex flex-col gap-4 items-center">
               <Button
-                onClick={() => handleAgeConfirmation()}
+                onClick={handleAgeConfirmation}
                 type="button"
-                className="text-[18px] cursor-pointer rounded-[16px] w-full py-[30px] bg-red-900"
+                className="text-[14px] sm:text-[18px] cursor-pointer rounded-[16px] w-full py-4 sm:py-[30px] bg-red-900"
               >
                 Ha, men 18 yoshga to‘lganman
               </Button>
@@ -98,7 +94,7 @@ const HeaderBanner = () => {
                   (window.location.href = "https://www.google.com")
                 }
                 type="button"
-                className="text-[18px] cursor-pointer rounded-[16px] w-full py-[30px] bg-[#2d2d2d]"
+                className="text-[14px] sm:text-[18px] cursor-pointer rounded-[16px] w-full py-4 sm:py-[30px] bg-[#2d2d2d]"
               >
                 Yo'q men 18 yoshga to‘lmaganman
               </Button>

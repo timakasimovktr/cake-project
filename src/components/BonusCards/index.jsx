@@ -8,9 +8,9 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
 const bonusImgs = {
+  bonus3: "/uploads/bonus3.svg",
   bonus1: "/uploads/bonus1.svg",
   bonus2: "/uploads/bonus2.svg",
-  bonus3: "/uploads/bonus3.svg",
   bonus4: "/uploads/bonus4.svg",
 };
 

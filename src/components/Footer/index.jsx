@@ -5,14 +5,12 @@ const info = {
   logo: {
     src: "uploads/logo.svg",
     alt: "blocks for shadcn/ui",
-    url: "https://t.me/inogdami",
+    url: "http://t.me/J_Hayot_support",
   },
 
   tagline: "Biz bilan birga bo'ling!",
 
   menuItems: [
-    {},
-    {},
     {
       title: "Yangiliklar",
       links: [
@@ -24,24 +22,24 @@ const info = {
     {
       title: "Ishtimoiy tarmoqlar",
       links: [
-        { text: "Telegram", url: "https://t.me/inogdami" },
+        { text: "Telegram", url: "http://t.me/J_Hayot_support" },
         { text: "Instagram", url: "https://www.instagram.com/jinsiy__hayot?igsh=anpjNjRqaHE1bzF3" },
       ],
     },
   ],
   copyright: "© 2025 Aurora Agency. All rights reserved.",
   bottomLinks: [
-    { text: "Telegram", url: "https://t.me/inogdami" },
+    { text: "Telegram", url: "http://t.me/J_Hayot_support" },
     { text: "Instagram", url: "https://www.instagram.com/jinsiy__hayot?igsh=anpjNjRqaHE1bzF3" },
   ],
 };
 
 const Footer = () => {
   return (
-    <section className="pb-10 text-white">
+    <section className="py-10 text-white bg-[#600e0e]">
       <div className="container">
         <footer>
-          <div className="grid grid-cols-2 gap-8 lg:grid-cols-6">
+          <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
             <div className="col-span-2 mb-8 lg:mb-0">
               <div className="flex items-center gap-2 lg:justify-start">
                 <a href="https://shadcnblocks.com">

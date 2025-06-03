@@ -172,7 +172,9 @@ const Requests = () => {
             <Image
               src="/uploads/18plus.svg"
               alt="Heart"
-              className="mt-10 md:mt-0 md:absolute md:left-[-100px] lg:left-[-30px] md:top-[30px] flex items-center justify-center"
+              className="mt-10 
+              hidden sm:flex
+              md:mt-0 md:absolute md:left-[-100px] lg:left-[-30px] md:top-[30px] items-center justify-center"
               width={180}
               height={180}
             />

@@ -24,36 +24,31 @@ const data = [
 const accordionData = [
   {
     question: "Erkaklar va ayollar salomatligi",
-    answer: "1. Anatomiyasi va funksiyasi <br> 2. Gigiyena va jinsiy yo‘l bilan yuqadigan infeksiyalar <br> 3. Urologiyaga kirish: urolog nimani davolaydi? <br> 4. Erkaklar va ayollar siydik-tanosil tizimining anatomiyasi va fiziologiyasi <br> 5. Hayz ko‘rish muammolari va PMS <br> 6. Erkaklar va ayollar uchun kontratsepsiya",
+    answer: "1. Ayollar anatomiyasi va funksiyasi<br>2. Urologiyaga kirish: urolog nimani davolaydi?<br>3. Gigiyena va<br>jinsiy yo‘l bilan yuqadigan infeksiyalar<br>4. Erkaklar va ayollar siydik-tanosil tizimining anatomiyasi va fiziologiyasi<br>5. Erkaklar va ayollar uchun kontratsepsiya",
   },
   {
     question: "PIKAP XXI ASRDA: yaqinlashuv fan sifatida",
-    answer: "1. Erkaklar uchun jalib etish: alfa strategiyasi va xulq-atvori <br>2. Ayollar uchun jozibadorlik: yumshoq kuch, signallar <br>3. Partnerni qanday qilib ehtiroslantirish kerak <br>4. Ideal o‘lcham qaysi?",
+    answer: "1. Erkaklar uchun jalib etish: alfa strategiyasi va xulq-atvori<br>2. Ayollar uchun jozibadorlik: yumshoq kuch, signallar<br>3. Pikap XXI asrda",
   },
   {
     question: "Istak kimyosi: bizni boshqaradigan gormonlar",
     answer:
-      "1. Testosteron gormonlar qiroli <br> 2. Seksual fantaziyalar <br> 3. Jinsiy aloqa va hayz sikli  <br> 4. Ovqat, uyqu va stress jinsiy moyillikni qanday o‘ldiradi (yoki kuchaytiradi)?",
+      "1. Testosteron gormonlar qiroli <br>2. Jinsiy aloqada xavfsizlik: holatlar, xavf-xatarlar va tana signallari<br>3. Pornografiyaga qaramlik <br>4. Hayz ko‘rish muammolari va PMS<br>5. Prostatit xavflimi?",
   },
   {
     question: "Psixologiya va seksologiya",
     answer:
-      "1. Juftlikda ishonch va xavfsizlik<br> 2. Jinsiy fantaziyalar va kreativlik<br> 3. Masturbatsiya: bu normal holatmi yoki noto‘g‘rimi?<br> 4. 40 yoshdan keyingi jinsiy aloqa: agar hamma narsa o‘zgarsa, nima qilish kerak?<br> 5. Jinsiy aloqa haqida 10 ta afsona.",
-  },
-  {
-    question: "Libidoni maksimal darajada olib chiqamiz",
-    answer:
-      "1. Jinsiy aloqada xavfsizlik: holatlar, xavf-xatarlar va tana signallari<br>2. Jinsiy maylni oshirish va jismoniy mashqlar<br>3. Jinsiy hayotni tezlashtirish uchun oddiy layfxaklar",
+      "1. Juftlikda ishonch va xavfsizlik <br>2. Masturbatsiya: bu normal holatmi yoki noto‘g‘rimi? <br>3. 40 yoshdan keyingi jinsiy aloqa: agar hamma narsa o‘zgarsa, nima qilish kerak? <br>4. Jinsiy aloqa haqida 10 ta afsona.",
   },
   {
     question: "PRO orgazm",
     answer:
-      "1. Partnerda qanday ehtirosni uyg'otiladi <br> 2. Erkaklar orgazmi: afsonalar va haqiqat <br> 3. Ayol orgazmi: klitor, qin va undan tashqari <br> 4. Ko‘p  marttalik orgazm - bu afsona emas <br> 5. Pornografiyaga qaramlik",
+      "1. Partnerni qanday qilib ehtiroslantirish kerak<br>2. Ko‘p marttalik orgazm - bu afsona emas<br>3. Ideal o‘lcham qaysi?<br>4. Seksual fantaziyalar",
   },
   {
     question: "Top 10 qaynoq savollar",
     answer:
-      "1. Ginekologiya<br> 2. Psixolog & seksolog<br> 3. Urologiya<br> 4. Pikaper",
+      "1. Ginekologiya <br>2.Psixolog & seksolog<br>3. Urologiya <br>4.Pikaper",
   },
 ];
 
@@ -79,9 +74,9 @@ const CautionCards = () => {
       </div>
       <div className="text-center mb-12">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase leading-tight">
-          JINSIY ALOQA HAQIDA EHTIYOTKORLIK BILAN,
+          JINSIY ALOQA HAQIDA EHTIYOTKORLIK BILAN, 
           <br className="hidden sm:block" />
-          ILMIY ASOSDA GAPLASHAMIZ
+           ILMIY ASOSDA GAPLASHAMIZ
         </h2>
       </div>
 

@@ -7,42 +7,35 @@ import "swiper/css/navigation";
 
 const reviews = [
   {
-    text: `Farzand tug‘ilganidan keyin turmush o‘rtog‘i bilan Jinsiy Hayot deyarli yo‘q bo‘lib ketdi. U boshqalarga qaray boshlaydi, deb qo‘rqdim... Ushbu kurs menga ishtiyoq va ishonchni qaytarishga yordam berdi.`,
-    name: "Umida",
+    name: "Камрон",
+    audio: "uploads/audio1.ogg",
     ageInfo: "28 yosh (5 yildan beri turmushda)",
-    avatar: "https://pagedone.io/asset/uploads/1696229994.png",
+    avatar: "uploads/avatar1.png",
   },
   {
-    text: `Farzand tug‘ilganidan keyin turmush o‘rtog‘i bilan Jinsiy Hayot deyarli yo‘q bo‘lib ketdi. U boshqalarga qaray boshlaydi, deb qo‘rqdim... Ushbu kurs menga ishtiyoq va ishonchni qaytarishga yordam berdi.`,
-    name: "Umida",
-    ageInfo: "28 yosh (5 yildan beri turmushda)",
-    avatar: "https://pagedone.io/asset/uploads/1696229994.png",
+    name: "Жавохир",
+    audio: "uploads/audio2.ogg",
+    ageInfo: "34 yosh (10 yildan beri turmushda)",
+    avatar: "uploads/avatar2.jpg",
   },
   {
-    text: `Farzand tug‘ilganidan keyin turmush o‘rtog‘i bilan Jinsiy Hayot deyarli yo‘q bo‘lib ketdi. U boshqalarga qaray boshlaydi, deb qo‘rqdim... Ushbu kurs menga ishtiyoq va ishonchni qaytarishga yordam berdi.`,
-    name: "Umida",
-    ageInfo: "28 yosh (5 yildan beri turmushda)",
-    avatar: "https://pagedone.io/asset/uploads/1696229994.png",
+    name: "Азамат",
+    audio: "uploads/audio3.ogg",
+    ageInfo: "26 yosh (1 yildan beri turmushda)",
+    avatar: "uploads/avatar3.jpg",
   },
   {
-    text: `Farzand tug‘ilganidan keyin turmush o‘rtog‘i bilan Jinsiy Hayot deyarli yo‘q bo‘lib ketdi. U boshqalarga qaray boshlaydi, deb qo‘rqdim... Ushbu kurs menga ishtiyoq va ishonchni qaytarishga yordam berdi.`,
-    name: "Umida",
-    ageInfo: "28 yosh (5 yildan beri turmushda)",
-    avatar: "https://pagedone.io/asset/uploads/1696229994.png",
+    name: "Махмуд",
+    audio: "uploads/audio4.ogg",
+    ageInfo: "32 yosh (4 yildan beri turmushda)",
+    avatar: "uploads/avatar4.jpg",
   },
   {
-    text: `Farzand tug‘ilganidan keyin turmush o‘rtog‘i bilan Jinsiy Hayot deyarli yo‘q bo‘lib ketdi. U boshqalarga qaray boshlaydi, deb qo‘rqdim... Ushbu kurs menga ishtiyoq va ishonchni qaytarishga yordam berdi.`,
-    name: "Umida",
-    ageInfo: "28 yosh (5 yildan beri turmushda)",
-    avatar: "https://pagedone.io/asset/uploads/1696229994.png",
+    name: "Nilufar",
+    audio: "uploads/audio5.ogg",
+    ageInfo: "40 yosh (15 yildan beri turmushda)",
+    avatar: "uploads/avatar5.jpg",
   },
-  {
-    text: `Farzand tug‘ilganidan keyin turmush o‘rtog‘i bilan Jinsiy Hayot deyarli yo‘q bo‘lib ketdi. U boshqalarga qaray boshlaydi, deb qo‘rqdim... Ushbu kurs menga ishtiyoq va ishonchni qaytarishga yordam berdi.`,
-    name: "Umida",
-    ageInfo: "28 yosh (5 yildan beri turmushda)",
-    avatar: "https://pagedone.io/asset/uploads/1696229994.png",
-  },
-  // Можно добавить больше отзывов
 ];
 
 export default function Comments() {
@@ -60,7 +53,7 @@ export default function Comments() {
         loop
         autoplay={{
           delay: 3000,
-          disableOnInteraction: false,
+          disableOnInteraction: true,
         }}
         breakpoints={{
           1024: { slidesPerView: 3 },
@@ -92,7 +85,10 @@ export default function Comments() {
                 ))}
             </div>
 
-            <p className="text-sm text-white leading-8 mb-9">{review.text}</p>
+            <audio controls className="w-full mb-4">
+              <source src={review.audio} type="audio/ogg" />
+              Your browser does not support the audio element.
+            </audio>
 
             <div className="flex items-center gap-5">
               <img
