@@ -17,7 +17,7 @@ const OnlaynDokon = () => {
       document.removeEventListener("click", enableSound);
     };
     document.addEventListener("click", enableSound);
-    
+
     if (video) {
       video.muted = true; // Start muted
       video.volume = 0; // Set volume to 0
@@ -97,6 +97,26 @@ const OnlaynDokon = () => {
             height={300}
           />
         </div>
+      </div>
+
+      <div className="text-center mb-12 mt-24">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase leading-tight">
+          JINSIY ALOQA HAQIDA EHTIYOTKORLIK BILAN,
+          <br className="hidden sm:block" />
+          ILMIY ASOSDA GAPLASHAMIZ
+        </h2>
+      </div>
+
+      <div className="">
+        <video
+          className="h-full w-full rounded-[28px] max-h-[600px] object-cover"
+          controls
+          playsInline
+          poster="/uploads/prviewImg.png"
+        >
+          <source src="/uploads/preview.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
     </section>
   );

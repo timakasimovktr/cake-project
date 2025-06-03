@@ -61,17 +61,6 @@ const CautionCards = () => {
 
   return (
     <section className="container text-white pb-12 px-4">
-      <div className="mb-16">
-        <video
-          className="h-full w-full rounded-[28px] max-h-[600px] object-cover"
-          controls
-          playsInline
-          poster="/uploads/prviewImg.png"
-        >
-          <source src="/uploads/preview.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
       <div className="text-center mb-12">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase leading-tight">
           JINSIY ALOQA HAQIDA EHTIYOTKORLIK BILAN, 
