@@ -7,6 +7,7 @@ import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { useState } from "react";
 import { EyeIcon, EyeOffIcon, Sun } from "lucide-react";
 import axios from "axios";
+import Cookies from "js-cookie";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 
@@ -86,7 +87,9 @@ export default function RegisterComponent() {
       );
 
       toast.success("Ro'yxatdan muvaffaqiyatli o'tdingiz!");
-      router.push("/payment");
+      router.push(
+        "https://cabinet.jinsiy-hayot.org/?token=" + Cookies.get("access_token")
+      );
     } catch (error) {
       if (axios.isAxiosError(error)) {
         toast.error(error.response?.data?.message || "Xatolik kodda");
