@@ -14,9 +14,9 @@ const info = {
     {
       title: "Yangiliklar",
       links: [
-        { text: "5 та нарса — эркаклар...", url: "https://telegra.ph/5-ta-narsa--ehrkaklar-%D2%B3ayotida-kech-yoki-tez-uchrajdi-06-02" },
-        { text: "3 та савол — сизни...", url: "https://telegra.ph/3-ta-savol--sizni-%D2%9Bandaj-ehrkak-ehkaningizni-k%D1%9Ersatadi-06-02" },
-        { text: "3 марта эркаклар...", url: "https://telegra.ph/3-marta-ehrkaklar-%D1%9Ezini-j%D1%9E%D2%9Botadigan-vaziyat-06-02" },
+        { text: "5ta narsa - erkaklar...", url: "https://telegra.ph/5-ta-narsa--ehrkaklar-%D2%B3ayotida-kech-yoki-tez-uchrajdi-06-02" },
+        { text: "3ta savol — sizni...", url: "https://telegra.ph/3-ta-savol--sizni-%D2%9Bandaj-ehrkak-ehkaningizni-k%D1%9Ersatadi-06-02" },
+        { text: "3 marta erkaklar...", url: "https://telegra.ph/3-marta-ehrkaklar-%D1%9Ezini-j%D1%9E%D2%9Botadigan-vaziyat-06-02" },
       ],
     },
     {

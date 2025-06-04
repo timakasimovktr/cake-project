@@ -19,7 +19,7 @@ export default function RegisterComponent() {
     formState: { errors },
   } = useForm({
     defaultValues: {
-      phoneNumber: "",
+      phoneNumber: "+998",
       password: "",
       confirm_password: "",
       fullName: "",
@@ -162,7 +162,7 @@ export default function RegisterComponent() {
                   htmlFor="phoneNumber"
                   className="text-gray-400 text-[16px]"
                 >
-                  Telefon raqami
+                  Telefon raqami (Telegram orqali)
                 </label>
                 <Controller
                   name="phoneNumber"

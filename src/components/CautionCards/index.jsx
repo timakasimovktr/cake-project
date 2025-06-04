@@ -24,7 +24,7 @@ const data = [
 const accordionData = [
   {
     question: "Erkaklar va ayollar salomatligi",
-    answer: "1. Ayollar anatomiyasi va funksiyasi<br>2. Urologiyaga kirish: urolog nimani davolaydi?<br>3. Gigiyena va<br>jinsiy yo‘l bilan yuqadigan infeksiyalar<br>4. Erkaklar va ayollar siydik-tanosil tizimining anatomiyasi va fiziologiyasi<br>5. Erkaklar va ayollar uchun kontratsepsiya",
+    answer: "1. Ayollar anatomiyasi va funksiyasi<br>2. Urologiyaga kirish: urolog nimani davolaydi?<br>3. Gigiyena va jinsiy yo‘l bilan yuqadigan infeksiyalar<br>4. Erkaklar va ayollar siydik-tanosil tizimining anatomiyasi va fiziologiyasi<br>5. Erkaklar va ayollar uchun kontratsepsiya",
   },
   {
     question: "PIKAP XXI ASRDA: yaqinlashuv fan sifatida",

@@ -131,7 +131,7 @@ export default function ResetPasswordComponent() {
                   htmlFor="phoneNumber"
                   className="text-gray-400 text-xs text-[16px]"
                 >
-                  Telefon raqami
+                  Telefon raqami (Telegram orqali)
                 </label>
                 <Controller
                   name="phoneNumber"
@@ -183,8 +183,8 @@ export default function ResetPasswordComponent() {
                   htmlFor="phoneNumber"
                   className="text-gray-400 text-xs text-[16px]"
                 >
-                  Telefon raqami
-                </label>
+                  Telefon raqami (Telegram orqali)
+                </label> 
                 <Controller
                   name="phoneNumber"
                   control={control}
