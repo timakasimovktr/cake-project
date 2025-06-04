@@ -124,7 +124,7 @@ const PaymentComponent = () => {
       console.log("Оплата завершена:", response.data);
       toast.success("Tolov muvaffaqiyatli amalga oshirildi!");
       Cookies.set("isActiveUser", true, { path: "/" });
-      router.push("https://cabinet.jinsiy-hayot.org/" + Cookies.get("access_token"));
+      router.push("https://cabinet.jinsiy-hayot.org/?token=" + Cookies.get("access_token"));
     } catch (error) {
       const errorMessage =
         error?.response?.data?.message ||
