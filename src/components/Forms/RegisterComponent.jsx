@@ -8,8 +8,8 @@ import { useState } from "react";
 import { EyeIcon, EyeOffIcon, Sun } from "lucide-react";
 import axios from "axios";
 import Cookies from "js-cookie";
-import { toast } from "sonner";
 import { useRouter } from "next/navigation";
+import { Toaster, toast } from "sonner";
 
 export default function RegisterComponent() {
   const {
@@ -101,6 +101,7 @@ export default function RegisterComponent() {
 
   return (
     <div className="flex flex-col lg:flex-row justify-center h-screen w-full bg-black overflow-hidden">
+      <Toaster theme="dark" position="bottom-center" richColors />
       <div className="w-full lg:w-[40%] p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col relative z-10">
         <div className="mb-8 md:mb-16 flex justify-center align-center">
           <div className="w-[100px] h-[54px] md:w-[159px]">
