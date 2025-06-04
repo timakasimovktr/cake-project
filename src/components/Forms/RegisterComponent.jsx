@@ -58,7 +58,7 @@ export default function RegisterComponent() {
       });
 
       toast.success("Tasdiqlash kodi yuborildi");
-      toast.success("Kodni TELEGRAM orqali yuborildi");
+      toast.success("Kod TELEGRAM orqali yuborildi");
       setIsVerificationStep(true);
     } catch (error) {
       if (axios.isAxiosError(error)) {
