@@ -318,7 +318,7 @@ export default function RegisterComponent() {
                 type="text"
                 value={code}
                 onChange={(e) => setCode(e.target.value)}
-                placeholder="1234"
+                placeholder="123456"
                 className="bg-[#1a0e0e] border-none text-white h-12"
               />
               <Button
