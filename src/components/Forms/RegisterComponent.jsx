@@ -86,7 +86,7 @@ export default function RegisterComponent() {
       );
 
       toast.success("Ro'yxatdan muvaffaqiyatli o'tdingiz!");
-      router.push("/");
+      router.push("/payment");
     } catch (error) {
       if (axios.isAxiosError(error)) {
         toast.error(error.response?.data?.message || "Xatolik kodda");
