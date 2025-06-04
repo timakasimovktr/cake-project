@@ -17,7 +17,7 @@ const HeaderNavigation = () => {
   return (
     <nav className="headerBannerWrapperNav w-full z-[1000] top-0 start-0 py-4 px-2 sm:px-4 sm:py-5 fixed bg-[#000000]/80 border-gray-200 dark:bg-gray-900">
       <div
-        className="w-full flex-col md:flex flex-wrap items-center justify-between mx-auto"
+        className="w-full flex-col md:flex-row flex flex-wrap items-center justify-between mx-auto"
       >
         <div className="items-center justify-between hidden w-full md:flex md:w-auto">
           <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0">
