@@ -114,6 +114,7 @@ const Requests = () => {
         setPhoneField("+998 ");
 
         form.reset();
+        router.push("/thankyou");
       })
       .catch((error) => {
         console.error("Error:", error);
