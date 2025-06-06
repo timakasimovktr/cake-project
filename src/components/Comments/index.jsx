@@ -36,6 +36,12 @@ const reviews = [
     ageInfo: "40 yosh (15 yildan beri turmushda)",
     avatar: "uploads/avatar5.jpg",
   },
+  {
+    name: "Aziza",
+    audio: "uploads/audio6.ogg",
+    ageInfo: "26 yosh",
+    avatar: "uploads/avatar6.jpg",
+  },
 ];
 
 export default function Comments() {
