@@ -34,7 +34,6 @@ export default function ThankyouLayout({ children }) {
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
             fbq('init', '1397735421376354');
-            fbq('track', 'PageView');
             fbq('track', 'Lead');
           `}
         </Script>
