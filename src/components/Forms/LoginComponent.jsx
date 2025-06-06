@@ -92,7 +92,11 @@ export default function LoginComponent() {
               alt="Logo"
               width={159}
               height={54}
-              className="brightness-200 mx-auto"
+              className="brightness-200 mx-auto cursor-pointer"
+              onClick={() => {
+                router.push("/"); // Redirect to home on logo click
+                window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to top
+              }}
             />
           </div>
         </div>

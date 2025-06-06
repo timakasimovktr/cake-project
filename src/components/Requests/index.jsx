@@ -3,8 +3,10 @@ import React from "react";
 import Image from "next/image";
 import "./style.scss";
 import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 const Requests = () => {
+  const router = useRouter();
   const [timeLeft, setTimeLeft] = React.useState(36000);
   const [phoneField, setPhoneField] = React.useState("+998 ");
 
@@ -112,6 +114,7 @@ const Requests = () => {
         setPhoneField("+998 ");
         
         form.reset();
+        router.push("/thankyou")
       })
       .catch((error) => {
         console.error("Error:", error);

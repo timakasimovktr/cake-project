@@ -103,7 +103,11 @@ export default function ResetPasswordComponent() {
               alt="Logo"
               width={159}
               height={54}
-              className="brightness-200"
+              className="brightness-200 cursor-pointer"
+              onClick={() => {
+                router.push("/"); // Redirect to home on logo click
+                window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to top
+              }}
             />
           </div>
         </div>
