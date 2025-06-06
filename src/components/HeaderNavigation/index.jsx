@@ -19,7 +19,7 @@ const HeaderNavigation = () => {
       <div
         className="w-full flex-col md:flex-row flex flex-wrap items-center justify-between mx-auto"
       >
-        <div className="items-center justify-between hidden w-full md:flex md:w-auto">
+        <div className="items-center flex-1 justify-between hidden w-full md:flex md:w-auto">
           <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0">
             <li>
               <span className="text-white text-lg font-medium">
@@ -28,7 +28,7 @@ const HeaderNavigation = () => {
             </li>
           </ul>
         </div>
-        <a href="/" className="flex items-center justify-center space-x-3 rtl:space-x-reverse">
+        <a href="/" className="flex flex-1 items-center justify-center space-x-3 rtl:space-x-reverse">
           <Image
             src="/uploads/logo.svg"
             width={120}
@@ -37,7 +37,7 @@ const HeaderNavigation = () => {
             alt="Logo"
           />
         </a>
-        <div className="flex mt-4 md:mt-0 space-x-3 justify-center md:space-x-0 rtl:space-x-reverse">
+        <div className="flex flex-1 justify-end mt-4 md:mt-0 space-x-3 justify-center md:space-x-0 rtl:space-x-reverse">
           <button
             type="button"
             className="border bg-[#303030] me-2 border-[#454545] text-white hover:opacity-70 transition-[3] cursor-pointer focus:ring-4 focus:outline-none focus:ring-[#FF4D00]/50 font-medium rounded-lg text-xs md:text-sm px-3 py-1 md:py-2.5 text-center "

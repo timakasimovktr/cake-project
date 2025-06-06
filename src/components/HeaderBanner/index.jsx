@@ -104,16 +104,16 @@ const HeaderBanner = () => {
       </Dialog>
 
       <div className="headerBannerWrapper container pt-20 px-4">
-        <div className="pageTitleWrapper w-full pt-10 pb-0 sm:pb-10 text-center">
+        <div className="pageTitleWrapper w-full pt-10 pb-0 sm:pb-15 text-center">
           <h1 className="pageTitle text-4xl md:text-7xl font-bold text-white uppercase leading-tight">
-            Jinsiy Hayot qo‘llanmasi
+            Jinsiy Hayot <br /> qo‘llanmasi
           </h1>
-          <button
+          {/* <button
             className="btn my-8 sm:my-20"
             onClick={() => router.push("/payment")}
           >
             Kursni sotib olish
-          </button>
+          </button> */}
         </div>
 
         <div className="headerBannerCards flex flex-col md:flex-row gap-4 md:gap-2 mb-12">
