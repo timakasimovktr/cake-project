@@ -55,7 +55,9 @@ const Requests = () => {
     }
 
     if (!/^\+998 \d{2} \d{3} \d{2} \d{2}$/.test(phone)) {
-      toast.error("Telefon raqami noto'g'ri formatda. Iltimos, qayta tekshiring.");
+      toast.error(
+        "Telefon raqami noto'g'ri formatda. Iltimos, qayta tekshiring."
+      );
       return;
     }
 
@@ -66,6 +68,17 @@ const Requests = () => {
       sms: "Jinsiy Hayot qo‘llanmasi",
     };
 
+    const crmData = {
+      leads: [
+        {
+          name,
+          phone: phone.replace(/\D/g, ""), // убираем все, кроме цифр
+          date: new Date().toISOString(),
+        },
+      ],
+    };
+
+    // Отправка на первый API
     fetch(`${process.env.NEXT_PUBLIC_API_URL}/sms`, {
       method: "POST",
       headers: {
@@ -75,12 +88,29 @@ const Requests = () => {
     })
       .then((response) => {
         if (!response.ok) {
-          toast.error("Xatolik yuz berdi, qayta urinib ko'ring.");
+          throw new Error("Xatolik yuz berdi, qayta urinib ko'ring.");
         }
         return response.json();
       })
       .then((data) => {
+        return fetch("https://digitaleuphoria.uz/CRM/hs/webhook/post", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Basic " + btoa("int_user:2y82FzMiK3rV"),
+          },
+          body: JSON.stringify(crmData),
+        });
+      })
+      .then((crmResponse) => {
+        if (!crmResponse.ok) {
+          throw new Error("CRM so‘rovida xatolik yuz berdi.");
+        }
         toast.success("So'rov yuborildi, tez orada siz bilan bog'lanamiz!");
+        // clean all fields
+        form.name.value = "";
+        setPhoneField("+998 ");
+        
         form.reset();
       })
       .catch((error) => {

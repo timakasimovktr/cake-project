@@ -45,7 +45,7 @@ const HeaderNavigation = () => {
               if(Cookies.get("access_token")){
               router.push("https://cabinet.jinsiy-hayot.org/?token=" + Cookies.get("access_token"));
               } else {
-                router.push("https://cabinet.jinsiy-hayot.org");
+                router.push("/login");
               }
             }}
           >

@@ -79,13 +79,15 @@ const PaymentComponent = () => {
         }
       );
 
-      if(response.data.error_code === -33017) {
-        toast.error("Karta topilmadi yoki karta muddati noto'g'ri ko'rsatilgan.");
+      if (response.data.error_code === -33017) {
+        toast.error(
+          "Karta topilmadi yoki karta muddati noto'g'ri ko'rsatilgan."
+        );
         return;
       }
 
       console.log("Bilgilangan karta:", response.data);
-      setIsOtpStep(true); 
+      setIsOtpStep(true);
     } catch (error) {
       const errorMessage =
         error?.response?.data?.message ||
@@ -124,7 +126,9 @@ const PaymentComponent = () => {
       console.log("Оплата завершена:", response.data);
       toast.success("Tolov muvaffaqiyatli amalga oshirildi!");
       Cookies.set("isActiveUser", true, { path: "/" });
-      router.push("https://cabinet.jinsiy-hayot.org/?token=" + Cookies.get("access_token"));
+      router.push(
+        "https://cabinet.jinsiy-hayot.org/?token=" + Cookies.get("access_token")
+      );
     } catch (error) {
       const errorMessage =
         error?.response?.data?.message ||
@@ -164,7 +168,7 @@ const PaymentComponent = () => {
           <nav className="mb-8">
             <button
               name="back"
-              onClick={() => router.push("/")}
+              onClick={() => router.back()}
               className="flex items-center text-sm text-gray-500 hover:text-gray-700"
             >
               <ArrowLeft className="mr-2 h-4 w-4" />
@@ -184,7 +188,9 @@ const PaymentComponent = () => {
               <div className="rounded-lg bg-[#161616] p-6 shadow-sm">
                 <div className="flex justify-between border-b pb-4">
                   <div>
-                    <div className="font-medium">Jinsiy Hayot Premium Subscription</div>
+                    <div className="font-medium">
+                      Jinsiy Hayot Premium Subscription
+                    </div>
                     <div className="text-sm text-gray-500">
                       1 marotaba to'lov
                     </div>

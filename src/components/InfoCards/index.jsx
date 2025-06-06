@@ -11,7 +11,7 @@ import "swiper/css/navigation";
 const speakerData = [
   {
     img: "/uploads/speaker1.svg",
-    name: "Napasov Hurshid Salayevich",
+    name: "Напасов Хушнуд Салаевич",
     description: "Seksolog, Psixolog",
   },
   {
@@ -83,18 +83,18 @@ const InfoCards = () => {
             },
             {
               img: "/uploads/infoCard4.svg",
-              title: "Oilaviy muammolarni hal qiling",
-              text: "Oila ichida uyg‘un munosabatlar qurishga zarur bo‘lgan jinsiy ko‘nikmalarni o‘zlashtiring.",
+              title: "Dunyoqarashingizni kengaytiring",
+              text: "Tanangizni tushunishni va undan yotoqda maksimal lazzat olishni o'rganing.",
             },
             {
               img: "/uploads/infoCard5.svg",
-              title: "Oilaviy muammolarni hal qiling",
-              text: "Oila ichida uyg‘un munosabatlar qurishga zarur bo‘lgan jinsiy ko‘nikmalarni o‘zlashtiring.",
+              title: "Tanangiz salomatligini yaxshilang",
+              text: "Sherigingiz bilan munosabatlardagi muammolarni hal qiling va kelajakda ulardan ",
             },
             {
               img: "/uploads/infoCard6.svg",
-              title: "Oilaviy muammolarni hal qiling",
-              text: "Oila ichida uyg‘un munosabatlar qurishga zarur bo‘lgan jinsiy ko‘nikmalarni o‘zlashtiring.",
+              title: "Munosabatlaringizni yaxshilang",
+              text: "Oilada o'zaro totuv munosabatlar o'rnatish uchun zarur bo'lgan jinsiy ko'nikmalarga ega ",
             },
           ].map((item, index) => (
             <div
