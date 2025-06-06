@@ -95,14 +95,19 @@ const Requests = () => {
         return response.json();
       })
       .then((data) => {
-        return fetch("https://digitaleuphoria.uz/CRM/hs/webhook/post", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: "Basic " + btoa("int_user:2y82FzMiK3rV"),
-          },
-          body: JSON.stringify(crmData),
-        });
+        return fetch(
+          "https://digitaleuphoria.uz/CRM/hs/webhook/post",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: "Basic " + btoa("int_user:2y82FzMiK3rV"),
+            },
+            body: JSON.stringify(crmData),
+          }.then(() => {
+            router.push("/thankyou");
+          })
+        );
       })
       .then((crmResponse) => {
         if (!crmResponse.ok) {
@@ -112,9 +117,8 @@ const Requests = () => {
         // clean all fields
         form.name.value = "";
         setPhoneField("+998 ");
-        
+
         form.reset();
-        router.push("/thankyou")
       })
       .catch((error) => {
         console.error("Error:", error);
