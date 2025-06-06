@@ -95,19 +95,14 @@ const Requests = () => {
         return response.json();
       })
       .then((data) => {
-        return fetch(
-          "https://digitaleuphoria.uz/CRM/hs/webhook/post",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: "Basic " + btoa("int_user:2y82FzMiK3rV"),
-            },
-            body: JSON.stringify(crmData),
-          }.then(() => {
-            router.push("/thankyou");
-          })
-        );
+        return fetch("https://digitaleuphoria.uz/CRM/hs/webhook/post", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Basic " + btoa("int_user:2y82FzMiK3rV"),
+          },
+          body: JSON.stringify(crmData),
+        });
       })
       .then((crmResponse) => {
         if (!crmResponse.ok) {
