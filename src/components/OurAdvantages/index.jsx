@@ -87,9 +87,10 @@ const OurAdvantages = () => {
           <button
             type="button z-2 absolute"
             className="btn"
-            onClick={() => (window.location.href = "/payment")}
+            onClick={() => (window.location.href = "/#request")}
           >
-            Kursni sotib olish
+            {/* Kursni sotib olish */}
+            Kursga yozilish
           </button>
         </div>
       </div>

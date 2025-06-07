@@ -8,6 +8,7 @@ import Comments from "../components/Comments";
 import OnlaynDokon from "../components/OnlaynDokon";
 import BonusCards from "../components/BonusCards";
 import Requests from "../components/Requests";
+import Sms from "../components/Sms";
 import PaymentIcons from "../components/PaymentIcons";
 import Footer from "../components/Footer";
 
@@ -18,10 +19,11 @@ export default function Home() {
       <HeaderBanner />
       <main>
         <OurAdvantages />
+        <Sms />
         <CautionCards />
         <InfoCards />
         <BonusCards />
-        <OnlaynDokon />
+        {/* <OnlaynDokon /> */}
         <Comments />
         <Requests />
         <PaymentIcons />

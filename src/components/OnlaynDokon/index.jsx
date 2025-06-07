@@ -83,9 +83,10 @@ const OnlaynDokon = () => {
             className="
             py-4 px-12 bg-[#641400] text-white font-semibold rounded-lg border-2 border-[#ffffff4e] hover:bg-[#ffffff] hover:text-[#000000] transition-colors duration-300 cursor-pointer
           "
-            onClick={() => (window.location.href = "/payment")}
+            onClick={() => (window.location.href = "/#request")}
           >
-            Kursni sotib olish
+            {/* Kursni sotib olish */}
+            Kursga yozilish
           </button>
         </div>
         <div className="dokonImage w-[50%] flex items-center justify-center">

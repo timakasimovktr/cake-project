@@ -119,9 +119,10 @@ const InfoCards = () => {
         <div className="w-full flex items-center justify-center">
           <button
             className="btn mt-8 mb-12 sm:mb-16  m-auto"
-            onClick={() => router.push("/payment")}
+            onClick={() => router.push("/#request")}
           >
-            Kursni sotib olish
+            {/* Kursni sotib olish */}
+            Kursga yozilish
           </button>
         </div>
       </section>

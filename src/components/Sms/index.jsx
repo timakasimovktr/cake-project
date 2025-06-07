@@ -5,7 +5,7 @@ import "./style.scss";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 
-const Requests = () => {
+const Sms = () => {
   const router = useRouter();
   const [timeLeft, setTimeLeft] = React.useState(36000);
   const [phoneField, setPhoneField] = React.useState("+998 ");
@@ -92,10 +92,10 @@ const Requests = () => {
         if (!response.ok) {
           throw new Error("Xatolik yuz berdi, qayta urinib ko'ring.");
         }
-        
+
         form.name.value = "";
         setPhoneField("+998 ");
-        
+
         form.reset();
         router.push("/thankyou");
         return response.json();
@@ -119,7 +119,7 @@ const Requests = () => {
   };
 
   return (
-    <section id="request" className="container text-white px-4 sm:px-6 lg:px-8">
+    <section className="container text-white px-4 sm:px-6 lg:px-8 mb-20">
       <div className="w-full flex flex-col bg-[#911D00] rounded-[28px]">
         <div className="flex flex-col md:flex-row justify-center items-center gap-4 py-8 px-6 md:px-16 bg-[#FF1100] rounded-t-[28px]">
           <p className="text-[24px] md:text-[30px] font-medium line-through">
@@ -214,4 +214,4 @@ const Requests = () => {
   );
 };
 
-export default Requests;
+export default Sms;

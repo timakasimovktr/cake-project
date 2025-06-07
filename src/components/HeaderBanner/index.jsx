@@ -104,7 +104,7 @@ const HeaderBanner = () => {
       </Dialog>
 
       <div className="headerBannerWrapper container pt-20 px-4">
-        <div className="pageTitleWrapper w-full pt-10 pb-0 sm:pb-15 text-center">
+        <div className="pageTitleWrapper w-full pt-10 pb-10 sm:pb-15 text-center">
           <h1 className="pageTitle text-4xl md:text-7xl font-bold text-white uppercase leading-tight">
             Jinsiy Hayot <br /> qo‘llanmasi
           </h1>
