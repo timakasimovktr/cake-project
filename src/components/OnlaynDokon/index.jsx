@@ -49,7 +49,7 @@ const OnlaynDokon = () => {
               />
               <p className="overText">1</p>
             </div>
-            <div className="advantageText">Ro'yhatdan otish</div>
+            <div className="advantageText">Ro'yhatdan o'tish</div>
           </div>
           <div className="advantageWrapper w-full">
             <div className="advantageNum">
