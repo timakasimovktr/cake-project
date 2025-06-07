@@ -92,17 +92,13 @@ const Requests = () => {
         if (!response.ok) {
           throw new Error("Xatolik yuz berdi, qayta urinib ko'ring.");
         }
+        
+        form.name.value = "";
+        setPhoneField("+998 ");
+        
+        form.reset();
+        router.push("/thankyou");
         return response.json();
-      })
-      .then((data) => {
-        return fetch("https://digitaleuphoria.uz/CRM/hs/webhook/post", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: "Basic " + btoa("int_user:2y82FzMiK3rV"),
-          },
-          body: JSON.stringify(crmData),
-        });
       })
       .then((crmResponse) => {
         if (!crmResponse.ok) {
