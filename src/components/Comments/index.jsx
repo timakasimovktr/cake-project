@@ -46,7 +46,7 @@ const reviews = [
 
 export default function Comments() {
   return (
-    <section className="container py-24 w-full overflow-visible px-4">
+    <section className="py-24 w-full overflow-hidden px-4">
       {" "}
       {/* Добавили px-4 и overflow-visible */}
       <div className="mb-14 flex flex-col items-center sm:flex-row sm:justify-between max-sm:gap-8">
