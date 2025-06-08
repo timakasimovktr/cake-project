@@ -46,31 +46,34 @@ const reviews = [
 
 export default function Comments() {
   return (
-    <section className="container py-24">
+    <section className="container py-24 w-full overflow-visible px-4">
+      {" "}
+      {/* Добавили px-4 и overflow-visible */}
       <div className="mb-14 flex flex-col items-center sm:flex-row sm:justify-between max-sm:gap-8">
         <h2 className="w-full text-4xl text-center font-bold text-white">
           Kursni yakunlaganlarning fikr-mulohazalari
         </h2>
       </div>
-
       <Swiper
         modules={[Navigation, Autoplay]}
         spaceBetween={20}
         loop
+        centeredSlides={true}
         autoplay={{
           delay: 3000,
           disableOnInteraction: true,
         }}
         breakpoints={{
-          1024: { slidesPerView: 3 },
-          768: { slidesPerView: 2 },
-          640: { slidesPerView: 1 },
+          1024: { slidesPerView: 3, centeredSlides: false },
+          768: { slidesPerView: 2, centeredSlides: false },
+          0: { slidesPerView: 1.1, centeredSlides: true, spaceBetween: 10 }, // мобилка
         }}
+        className="!overflow-visible"
       >
         {reviews.map((review, index) => (
           <SwiperSlide
             key={index}
-            className="group bg-[#911D00] border border-[#ff00007f] rounded-2xl p-6 transition-all duration-500"
+            className="group bg-[#911D00] border border-[#ff00007f] rounded-2xl p-6 transition-all duration-500 !overflow-visible"
           >
             <div className="flex items-center mb-4 gap-2 text-white">
               {Array(5)

@@ -127,9 +127,9 @@ const InfoCards = () => {
         </div>
       </section>
 
-      <section className="container">
+      <section className="container noPadding">
         <div className="text-white text-center mb-6">
-          <h2 className="text-3xl md:text-4xl font-bold uppercase leading-tight">
+          <h2 className="text-3xl px-4 sm:px-0 md:text-4xl font-bold uppercase leading-tight">
             bizning sertifikatlangan mutaxassislarimiz
           </h2>
         </div>
@@ -139,9 +139,18 @@ const InfoCards = () => {
           autoplay={{ delay: 3000 }}
           loop
           breakpoints={{
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-            0: { slidesPerView: 1 },
+            0: {
+              slidesPerView: 1.1, // показываем часть следующего слайда
+              centeredSlides: true, // центрируем текущий слайд
+            },
+            768: {
+              slidesPerView: 2,
+              centeredSlides: false,
+            },
+            1024: {
+              slidesPerView: 3,
+              centeredSlides: false,
+            },
           }}
         >
           {/* {Array.from({ length: 5 }).map((_, index) => (
@@ -181,10 +190,10 @@ const InfoCards = () => {
                       className="w-full h-full max-h-[320px] object-cover rounded-xl"
                     />
                   </div>
-                  <h4 className="text-white text-lg font-bold mb-2">
+                  <h4 className="text-white text-sm sm:text-lg font-bold mb-2">
                     {speaker.name}
                   </h4>
-                  <p className="text-white text-md leading-snug">
+                  <p className="text-white text-xs sm:text-md leading-snug">
                     {speaker.description}
                   </p>
                 </div>

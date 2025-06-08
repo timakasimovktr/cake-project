@@ -16,22 +16,33 @@ const bonusImgs = {
 
 const BonusCards = () => {
   return (
-    <section className="py-20 w-full px-4 md:px-0">
-      <div className="text-center mb-12">
+    <section className="py-20 w-full overflow-visible">
+      {" "}
+      {/* важно */}
+      <div className="text-center mb-12 px-4 md:px-0">
         <h2 className="text-white text-3xl md:text-4xl font-bold uppercase leading-tight">
           bepul bonus materiallar
         </h2>
       </div>
-
       <Swiper
         effect="coverflow"
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={1}
+        slidesPerView={1.2}
+        spaceBetween={-10}
         breakpoints={{
-          640: { slidesPerView: 1.5 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
+          640: {
+            slidesPerView: 1.2,
+            centeredSlides: true,
+          },
+          768: {
+            slidesPerView: 2,
+            centeredSlides: false,
+          },
+          1024: {
+            slidesPerView: 3,
+            centeredSlides: false,
+          },
         }}
         coverflowEffect={{
           rotate: 50,
@@ -47,10 +58,13 @@ const BonusCards = () => {
         }}
         loop={true}
         modules={[EffectCoverflow, Pagination, Autoplay]}
-        className="w-full max-w-6xl mx-auto"
+        className="w-full max-w-6xl mx-auto px-4"
       >
         {Object.entries(bonusImgs).map(([key, imgSrc], index) => (
-          <SwiperSlide key={index} className="flex justify-center items-center">
+          <SwiperSlide
+            key={index}
+            className="flex justify-center items-center !overflow-visible"
+          >
             <img
               src={imgSrc}
               alt={`Bonus ${index + 1}`}

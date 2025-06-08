@@ -32,7 +32,7 @@ export default function ThankyouLayout({ children }) {
         t.src=v;s=b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t,s)}(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '123456789012345'); // новый ID
+        fbq('init', '123456789012345');
         fbq('track', 'Lead');
       `}
         </Script>
