@@ -108,7 +108,7 @@ const Requests = () => {
             leads: [
               {
                 name: requestData.name,
-                phone: requestData.phone,
+                phone: requestData.phoneNumber,
                 date: new Date().toISOString(), // или другая дата
               },
             ],
