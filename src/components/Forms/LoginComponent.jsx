@@ -58,7 +58,9 @@ export default function LoginComponent() {
 
       Cookies.set("access_token", token, { expires: 7, path: "/" });
       console.log("Login successful:", token);
-      router.push("/");
+      router.push(
+        "https://cabinet.jinsiy-hayot.org/?token=" + token
+      );
     } catch (error) {
       if (axios.isAxiosError(error)) {
         const rawMessage = error.response?.data?.message;
