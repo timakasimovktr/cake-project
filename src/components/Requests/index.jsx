@@ -81,6 +81,8 @@ const Requests = () => {
     };
 
     // Отправка на первый API
+    const crmAuth = btoa("int_user:2y82FzMiK3rV");
+
     fetch(`${process.env.NEXT_PUBLIC_API_URL}/sms`, {
       method: "POST",
       headers: {
@@ -92,29 +94,38 @@ const Requests = () => {
         if (!response.ok) {
           throw new Error("Xatolik yuz berdi, qayta urinib ko'ring.");
         }
-        
-        form.name.value = "";
-        setPhoneField("+998 ");
-        
-        form.reset();
-        router.push("/thankyou");
         return response.json();
       })
-      // .then((crmResponse) => {
-      //   if (!crmResponse.ok) {
-      //     throw new Error("CRM so‘rovida xatolik yuz berdi.");
-      //   }
-      //   toast.success("So'rov yuborildi, tez orada siz bilan bog'lanamiz!");
-      //   // clean all fields
-      //   form.name.value = "";
-      //   setPhoneField("+998 ");
-
-      //   form.reset();
-      //   router.push("/thankyou");
-      // })
+      .then(() => {
+        // Второй запрос — CRM (без показа ошибок)
+        fetch("https://digitaleuphoria.uz/CRM/hs/webhook/post", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Basic ${crmAuth}`,
+          },
+          body: JSON.stringify({
+            leads: [
+              {
+                name: requestData.name,
+                phone: requestData.phone,
+                date: new Date().toISOString(), // или другая дата
+              },
+            ],
+          }),
+        }).catch((err) => {
+          console.error("CRM so‘rovida xatolik:", err);
+        });
+      })
       .catch((error) => {
         console.error("Error:", error);
         toast.error("Xatolik yuz berdi, qayta urinib ko'ring.");
+      })
+      .finally(() => {
+        form.name.value = "";
+        setPhoneField("+998 ");
+        form.reset();
+        router.push("/thankyou");
       });
   };
 

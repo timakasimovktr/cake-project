@@ -78,7 +78,7 @@ export default function RegisterComponent() {
       delete submitData.confirm_password;
       delete submitData.agree;
 
-      await axios.post(
+      const response = await axios.post(
         `${process.env.NEXT_PUBLIC_API_URL}/auth/verify-phone-code`,
         {
           phoneNumber: submitData.phoneNumber.replace(/[^\d+]/g, ""),
@@ -88,7 +88,7 @@ export default function RegisterComponent() {
 
       toast.success("Ro'yxatdan muvaffaqiyatli o'tdingiz!");
       router.push(
-        "https://cabinet.jinsiy-hayot.org/?token=" + Cookies.get("access_token")
+        "https://cabinet.jinsiy-hayot.org/?token=" + response.data.access_token
       );
     } catch (error) {
       if (axios.isAxiosError(error)) {
