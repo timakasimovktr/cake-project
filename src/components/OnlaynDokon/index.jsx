@@ -29,7 +29,7 @@ const OnlaynDokon = () => {
 
   return (
     <section className="container text-white">
-      <div className="dokonWrapper w-full py-[30px] px-[90px] flex items-center justify-center bg-[#911D00] rounded-[28px]">
+      {/* <div className="dokonWrapper w-full py-[30px] px-[90px] flex items-center justify-center bg-[#911D00] rounded-[28px]">
         <div className="routesWrapper dokonText w-[50%]">
           <h3
             className="
@@ -85,7 +85,6 @@ const OnlaynDokon = () => {
           "
             onClick={() => (window.location.href = "/#request")}
           >
-            {/* Kursni sotib olish */}
             Kursga yozilish
           </button>
         </div>
@@ -98,9 +97,9 @@ const OnlaynDokon = () => {
             height={300}
           />
         </div>
-      </div>
+      </div> */}
 
-      <div className="text-center mb-12 mt-24">
+      <div className="text-center mb-12 mt-12">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase leading-tight">
           JINSIY ALOQA HAQIDA EHTIYOTKORLIK BILAN,
           <br className="hidden sm:block" />

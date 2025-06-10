@@ -23,7 +23,7 @@ export default function Home() {
         <CautionCards />
         <InfoCards />
         <BonusCards />
-        {/* <OnlaynDokon /> */}
+        <OnlaynDokon />
         <Comments />
         <Requests />
         <PaymentIcons />
