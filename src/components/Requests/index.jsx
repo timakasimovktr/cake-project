@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import "./style.scss";
 import { toast } from "sonner";
+import Cookies from "js-cookie";
 import { useRouter } from "next/navigation";
 
 const Requests = () => {
@@ -63,6 +64,15 @@ const Requests = () => {
       return;
     }
 
+    const sentPhonesCookie = Cookies.get("alreadySentPhone");
+    const sentPhones = sentPhonesCookie ? sentPhonesCookie.split(",") : [];
+    const purePhone = phone.replace(/\D/g, ""); // только цифры
+
+    if (sentPhones.includes(purePhone)) {
+      toast.error("Bu raqamdan allaqachon so‘rov yuborilgan.");
+      return;
+    }
+
     const requestData = {
       name,
       surname: name,
@@ -74,13 +84,12 @@ const Requests = () => {
       leads: [
         {
           name,
-          phone: phone.replace(/\D/g, ""), // убираем все, кроме цифр
+          phone: purePhone,
           date: new Date().toISOString(),
         },
       ],
     };
 
-    // Отправка на первый API
     const crmAuth = btoa("int_user:2y82FzMiK3rV");
 
     fetch(`${process.env.NEXT_PUBLIC_API_URL}/sms`, {
@@ -94,25 +103,23 @@ const Requests = () => {
         if (!response.ok) {
           throw new Error("Xatolik yuz berdi, qayta urinib ko'ring.");
         }
+
+        // Добавляем номер в куки (только цифры)
+        const updatedPhones = [...sentPhones, purePhone];
+        Cookies.set("alreadySentPhone", updatedPhones.join(","), {
+          expires: 1,
+        });
+
         return response.json();
       })
       .then(() => {
-        // Второй запрос — CRM (без показа ошибок)
         fetch("https://digitaleuphoria.uz/CRM/hs/webhook/post", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
             Authorization: `Basic ${crmAuth}`,
           },
-          body: JSON.stringify({
-            leads: [
-              {
-                name: requestData.name,
-                phone: requestData.phoneNumber,
-                date: new Date().toISOString(), // или другая дата
-              },
-            ],
-          }),
+          body: JSON.stringify(crmData),
         }).catch((err) => {
           console.error("CRM so‘rovida xatolik:", err);
         });
