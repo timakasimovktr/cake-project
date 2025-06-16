@@ -86,6 +86,7 @@ const Sms = () => {
           name,
           phone: purePhone,
           date: new Date().toISOString(),
+          comments: "https://jinsiy-hayot.org",
         },
       ],
     };

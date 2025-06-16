@@ -86,6 +86,7 @@ const Requests = () => {
           name,
           phone: purePhone,
           date: new Date().toISOString(),
+          comments: "https://jinsiy-hayot.org",
         },
       ],
     };
