@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import "./style.scss";
 import { toast } from "sonner";
+import Cookies from "js-cookie";
 import { useRouter } from "next/navigation";
 
 const Sms = () => {
