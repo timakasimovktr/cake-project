@@ -63,9 +63,9 @@ const Sms = () => {
       return;
     }
 
+    const purePhone = phone.replace(/\D/g, ""); // только цифры
     const sentPhonesCookie = Cookies.get("alreadySentPhone");
     const sentPhones = sentPhonesCookie ? sentPhonesCookie.split(",") : [];
-    const purePhone = phone.replace(/\D/g, ""); // только цифры
 
     if (sentPhones.includes(purePhone)) {
       toast.error("Bu raqamdan allaqachon so‘rov yuborilgan.");
@@ -103,7 +103,7 @@ const Sms = () => {
           throw new Error("Xatolik yuz berdi, qayta urinib ko'ring.");
         }
 
-        // Добавляем номер в куки (только цифры)
+        // Добавляем номер в куки
         const updatedPhones = [...sentPhones, purePhone];
         Cookies.set("alreadySentPhone", updatedPhones.join(","), {
           expires: 1,
