@@ -35,7 +35,7 @@ const PaymentIcons = () => {
       <div className="w-full flex items-center justify-center">
         <button
           className="btn my-15 m-auto"
-          onClick={() => router.push("/payment")}
+          onClick={() => router.push("/#request")}
         >
           To‘lovni amalga oshirish
         </button>
