@@ -38,15 +38,34 @@ export default function RootLayout({ children }) {
           `}
         </Script>
 
-        {/* noscript fallback */}
+        {/* Yandex Metrika + Webvisor */}
+        <Script id="yandex-metrika" strategy="afterInteractive">
+          {`
+            (function(m,e,t,r,i,k,a){
+              m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+              m[i].l=1*new Date();
+              k=e.createElement(t),a=e.getElementsByTagName(t)[0],
+              k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+            })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+            ym(96873350, "init", {
+              clickmap:true,
+              trackLinks:true,
+              accurateTrackBounce:true,
+              webvisor:true
+            });
+          `}
+        </Script>
+
+        {/* Yandex fallback for no-script */}
         <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=1397735421376354&ev=PageView&noscript=1"
-            alt=""
-          />
+          <div>
+            <img
+              src="https://mc.yandex.ru/watch/96873350"
+              style={{ position: "absolute", left: "-9999px" }}
+              alt=""
+            />
+          </div>
         </noscript>
 
         <div className="stars"></div>
